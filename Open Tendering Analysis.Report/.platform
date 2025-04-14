@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Open Tendering Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b76e1a31-7bfe-a33c-41f9-31d1f5e86e81"
+  }
+}

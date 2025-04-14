@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Tender Overview Report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3beabd90-5366-b9a8-4c38-fff2f977a951"
+  }
+}

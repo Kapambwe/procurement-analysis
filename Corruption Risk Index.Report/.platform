@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Corruption Risk Index"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ac2c8861-d9e0-b816-4bde-c2d0fa8264ee"
+  }
+}

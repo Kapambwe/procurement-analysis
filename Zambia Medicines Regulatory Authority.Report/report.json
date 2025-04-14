@@ -1,0 +1,88 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.59\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"creationSource\":\"QuickCreate\"}",
+  "filters": "[{\"name\":\"33f883693dc0a5386281\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Company\"}},\"Property\":\"CompanyId\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Company\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CompanyId\"}},\"Right\":{\"Literal\":{\"Value\":\"25022L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1}]",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "03f7b280d45d16c04979",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"15f0c649ae0cb93b6233\",\"layouts\":[{\"id\":0,\"position\":{\"x\":530.0353499782643,\"y\":74.91166279692803,\"z\":3,\"width\":238.86926439020445,\"height\":117.31449079518917,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(Tender.TenderId)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Tender\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"TenderId\"}},\"Function\":5},\"Name\":\"CountNonNull(Tender.TenderId)\",\"NativeReferenceName\":\"Active Tenders\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"TenderId\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(Tender.TenderId)\":{\"displayName\":\"Active Tenders\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"fc083e100036d3d67858\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TenderStatus\"}},\"Property\":\"TenderStatusId\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TenderStatus\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"TenderStatusId\"}},\"Right\":{\"Literal\":{\"Value\":\"1L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1}]",
+          "height": 117.31,
+          "width": 238.87,
+          "x": 530.04,
+          "y": 74.91,
+          "z": 3.00
+        },
+        {
+          "config": "{\"name\":\"347fbafbe5d201d5904c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":292.5795131880019,\"y\":74.91166279692803,\"z\":2,\"width\":258.657250789393,\"height\":117.31449079518917,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(Tender.TenderId)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Tender\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"TenderId\"}},\"Function\":5},\"Name\":\"CountNonNull(Tender.TenderId)\",\"NativeReferenceName\":\"Number of Tenders\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"TenderId\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(Tender.TenderId)\":{\"displayName\":\"Number of Tenders\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 117.31,
+          "width": 258.66,
+          "x": 292.58,
+          "y": 74.91,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"37289c5dd0aa900384c0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":14.206437532489494,\"y\":0,\"z\":1,\"width\":394.2286415265835,\"height\":74.58379704556984,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Zambia Medicines Regulatory Authority Tenders\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 74.58,
+          "width": 394.23,
+          "x": 14.21,
+          "y": 0.00,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"6c18a4d05024d40a7093\",\"layouts\":[{\"id\":0,\"position\":{\"x\":14.134275999420382,\"y\":274.2049543887554,\"z\":5,\"width\":1017.6678719582675,\"height\":320.8480651868427,\"tabOrder\":5}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Tenders.Amount\"},{\"queryRef\":\"AwardContract.CompanyName\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Tenders\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"AwardContract\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Amount\"},\"Name\":\"Tenders.Amount\",\"NativeReferenceName\":\"Amount\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"CompanyName\"},\"Name\":\"AwardContract.CompanyName\",\"NativeReferenceName\":\"CompanyName\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Amount\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 320.85,
+          "width": 1017.67,
+          "x": 14.13,
+          "y": 274.20,
+          "z": 5.00
+        },
+        {
+          "config": "{\"name\":\"759887bda9259e2a22d8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":14.134275999420382,\"y\":74.91166279692803,\"z\":0,\"width\":264.31096118916116,\"height\":117.31449079518917,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Tender.Amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Tender\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Amount\"}},\"Function\":0},\"Name\":\"Sum(Tender.Amount)\",\"NativeReferenceName\":\"Total Amount Tenders\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Amount\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(Tender.Amount)\":{\"displayName\":\"Total Amount Tenders\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 117.31,
+          "width": 264.31,
+          "x": 14.13,
+          "y": 74.91,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e40a320a185130a680d3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":783.0388903678892,\"y\":74.91166279692803,\"z\":4,\"width\":231.80212639049427,\"height\":117.31449079518917,\"tabOrder\":4}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(AwardContract.TenderId)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"AwardContract\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"TenderId\"}},\"Function\":5},\"Name\":\"CountNonNull(AwardContract.TenderId)\",\"NativeReferenceName\":\"Awarded Tenders\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"TenderId\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(AwardContract.TenderId)\":{\"displayName\":\"Awarded Tenders\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"493bec6bb6290507da09\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"AwardContract\"}},\"Property\":\"BuyerId\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"AwardContract\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"BuyerId\"}},\"Right\":{\"Literal\":{\"Value\":\"25022L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1}]",
+          "height": 117.31,
+          "width": 231.80,
+          "x": 783.04,
+          "y": 74.91,
+          "z": 4.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

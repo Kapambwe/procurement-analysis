@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Corruption Index Score"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e598b32c-957e-ac8c-4eff-971644f73d5d"
+  }
+}

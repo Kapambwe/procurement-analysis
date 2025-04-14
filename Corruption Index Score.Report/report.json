@@ -1,0 +1,141 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.63\",\"type\":2}},\"activeSectionIndex\":2,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Efficiency and Potential Loss",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "5562a0cbf95202eeddee",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"66fc99ee6c8d13433b66\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.893993199594266,\"y\":0,\"z\":0,\"width\":1270.6714123478923,\"height\":421.2014247827274,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Company.Name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Tender.EfficiencyGain%\"},{\"queryRef\":\"Tender.PotentialLoss%\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Company\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"Tender\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"},\"Name\":\"Company.Name\",\"NativeReferenceName\":\"Procuring Entity\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"PotentialLoss%\"},\"Name\":\"Tender.PotentialLoss%\",\"NativeReferenceName\":\"Potential Loss %\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"EfficiencyGain%\"},\"Name\":\"Tender.EfficiencyGain%\",\"NativeReferenceName\":\"Efficiency Gain %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"EfficiencyGain%\"}}}]},\"columnProperties\":{\"Tender.EfficiencyGain%\":{\"displayName\":\"Efficiency Gain %\"},\"Tender.PotentialLoss%\":{\"displayName\":\"Potential Loss %\"},\"Company.Name\":{\"displayName\":\"Procuring Entity\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}}},{\"properties\":{},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"highlightMatching\":1}},{\"properties\":{\"enableValueDataLabel\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"enableTitleDataLabel\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Tender.PotentialLoss%\"}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Tender.PotentialLoss%\"}}]}}}",
+          "filters": "[{\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Tender\"}},\"Property\":\"PotentialLoss%\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Tender\",\"Type\":0}],\"Where\":[{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"PotentialLoss%\"}},\"Right\":{\"Literal\":{\"Value\":\"0.1M\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"PotentialLoss%\"}},\"Right\":{\"Literal\":{\"Value\":\"0.27M\"}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 421.20,
+          "width": 1270.67,
+          "x": 9.89,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e53380439f8bba1dfa20\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.530901112365362,\"y\":430.4790335751688,\"z\":1000,\"width\":1270.786814982048,\"height\":289.10400040841597,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"TenderPeriod.TenderYear\",\"active\":true}],\"Y\":[{\"queryRef\":\"Tender.EfficiencyGain%\"},{\"queryRef\":\"Tender.PotentialLoss%\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TenderPeriod\",\"Type\":0},{\"Name\":\"t1\",\"Entity\":\"Tender\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"TenderYear\"},\"Name\":\"TenderPeriod.TenderYear\",\"NativeReferenceName\":\"Year\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"EfficiencyGain%\"},\"Name\":\"Tender.EfficiencyGain%\",\"NativeReferenceName\":\"Efficiency Gain %\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"PotentialLoss%\"},\"Name\":\"Tender.PotentialLoss%\",\"NativeReferenceName\":\"Potential Loss %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"EfficiencyGain%\"}}}]},\"columnProperties\":{\"Tender.EfficiencyGain%\":{\"displayName\":\"Efficiency Gain %\"},\"Tender.PotentialLoss%\":{\"displayName\":\"Potential Loss %\"},\"TenderPeriod.TenderYear\":{\"displayName\":\"Year\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Tender.PotentialLoss%\"}}]}}}",
+          "filters": "[]",
+          "height": 289.10,
+          "width": 1270.79,
+          "x": 9.53,
+          "y": 430.48,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Average of Corruption Scores",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "862f5b28c715e8f847ef",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"41156339029c36c80970\",\"layouts\":[{\"id\":0,\"position\":{\"x\":35.335689998550954,\"y\":455.12368718133627,\"z\":1000,\"width\":1245.2297155489357,\"height\":264.31096118916116,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(TenderCorruptionIndex.CorruptionIndexScore)\"}],\"Category\":[{\"queryRef\":\"TenderPeriod.TenderYear\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TenderCorruptionIndex\",\"Type\":0},{\"Name\":\"t1\",\"Entity\":\"TenderPeriod\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"CorruptionIndexScore\"}},\"Function\":1},\"Name\":\"Sum(TenderCorruptionIndex.CorruptionIndexScore)\",\"NativeReferenceName\":\"Average of Corruption Score\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"TenderYear\"},\"Name\":\"TenderPeriod.TenderYear\",\"NativeReferenceName\":\"Year\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"CorruptionIndexScore\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(TenderCorruptionIndex.CorruptionIndexScore)\":{\"displayName\":\"Average of Corruption Score\"},\"TenderPeriod.TenderYear\":{\"displayName\":\"Year\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Categorical'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"2814a2f58e92ab3cf293\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TenderPeriod\"}},\"Property\":\"TenderYear\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TenderPeriod\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"TenderYear\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 264.31,
+          "width": 1245.23,
+          "x": 35.34,
+          "y": 455.12,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"ad6c7a58f54132ae3d28\",\"layouts\":[{\"id\":0,\"position\":{\"x\":35.52631499694657,\"y\":18.421052220638963,\"z\":0,\"width\":1244.7368143374613,\"height\":398.6842016324004,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Company.Name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(TenderCorruptionIndex.CorruptionIndexScore)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Company\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"TenderCorruptionIndex\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"},\"Name\":\"Company.Name\",\"NativeReferenceName\":\"Procuring Entity\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"CorruptionIndexScore\"}},\"Function\":1},\"Name\":\"Sum(TenderCorruptionIndex.CorruptionIndexScore)\",\"NativeReferenceName\":\"Average Corruption Score\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"CorruptionIndexScore\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(TenderCorruptionIndex.CorruptionIndexScore)\":{\"displayName\":\"Average Corruption Score\"},\"Company.Name\":{\"displayName\":\"Procuring Entity\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TenderCorruptionIndex\"}},\"Property\":\"CorruptionIndexScore\"}},\"Function\":1}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TenderCorruptionIndex\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"CorruptionIndexScore\"}},\"Function\":1}},\"Right\":{\"Literal\":{\"Value\":\"0.6M\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 398.68,
+          "width": 1244.74,
+          "x": 35.53,
+          "y": 18.42,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Tender By Procurement Entities",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "c01c09ddaaa8ba7cc9ee",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"f9f14dc7c88c46f63b49\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.893993199594266,\"y\":0,\"z\":0,\"width\":672.7915375724102,\"height\":343.46290678591527,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Company.Name\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Tender.TenderId)\"}],\"Series\":[{\"queryRef\":\"ProcurementMethod.Name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Company\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"Tender\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"ProcurementMethod\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"},\"Name\":\"Company.Name\",\"NativeReferenceName\":\"Procuring Entities\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"TenderId\"}},\"Function\":5},\"Name\":\"CountNonNull(Tender.TenderId)\",\"NativeReferenceName\":\"Tenders\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Name\"},\"Name\":\"ProcurementMethod.Name\",\"NativeReferenceName\":\"Name1\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"TenderId\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(Tender.TenderId)\":{\"displayName\":\"Tenders\"},\"Company.Name\":{\"displayName\":\"Procuring Entities\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 343.46,
+          "width": 672.79,
+          "x": 9.89,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Average Number of Bids",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "cc58bf430d45d783f593",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1085d55579d6a7b656cd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":736.3957795698019,\"y\":373.14488638469805,\"z\":2000,\"width\":544.1696259776847,\"height\":336.3957687862051,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Tender.TenderId)\"}],\"Category\":[{\"queryRef\":\"ProcurementMethod.Name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Tender\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"ProcurementMethod\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"TenderId\"}},\"Function\":5},\"Name\":\"CountNonNull(Tender.TenderId)\",\"NativeReferenceName\":\"Number of Tenders\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Name\"},\"Name\":\"ProcurementMethod.Name\",\"NativeReferenceName\":\"Procurement Methods\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"TenderId\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(Tender.TenderId)\":{\"displayName\":\"Number of Tenders\"},\"ProcurementMethod.Name\":{\"displayName\":\"Procurement Methods\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 336.40,
+          "width": 544.17,
+          "x": 736.40,
+          "y": 373.14,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"92ccb5433f972b06f488\",\"layouts\":[{\"id\":0,\"position\":{\"x\":8.410381757480252,\"y\":0,\"z\":0,\"width\":1271.1691284877295,\"height\":344.82565205669033,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Company.Name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Tender.NumberofTenderers)\"}],\"Series\":[{\"queryRef\":\"ProcurementMethod.Name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Company\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"Tender\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"ProcurementMethod\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"},\"Name\":\"Company.Name\",\"NativeReferenceName\":\"Name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"NumberofTenderers\"}},\"Function\":1},\"Name\":\"Sum(Tender.NumberofTenderers)\",\"NativeReferenceName\":\"Average of Number of Bids\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Name\"},\"Name\":\"ProcurementMethod.Name\",\"NativeReferenceName\":\"Procurment Method\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"NumberofTenderers\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(Tender.NumberofTenderers)\":{\"displayName\":\"Average of Number of Bids\"},\"ProcurementMethod.Name\":{\"displayName\":\"Procurment Method\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"fb82b4bd2a207fce04c4\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ProcurementMethod\"}},\"Property\":\"Name\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ProcurementMethod\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Name\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false},{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Company\"}},\"Property\":\"Name\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Company\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"Tender\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"NumberofTenderers\"}},\"Function\":0}}}],\"Top\":20}}},\"Type\":2},{\"Name\":\"c\",\"Entity\":\"Company\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 344.83,
+          "width": 1271.17,
+          "x": 8.41,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"9d61039ae799230cc018\",\"layouts\":[{\"id\":0,\"position\":{\"x\":52.865256761304444,\"y\":373.6612466537655,\"z\":1000,\"width\":718.4868987104558,\"height\":336.4152702992101,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Company.Name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Tender.PercentageOpenTendering\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Tender\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"Company\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"},\"Name\":\"Company.Name\",\"NativeReferenceName\":\"Procurement Entities\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"PercentageOpenTendering\"},\"Name\":\"Tender.PercentageOpenTendering\",\"NativeReferenceName\":\"Percentage Open Bids\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"PercentageOpenTendering\"}}}]},\"columnProperties\":{\"Tender.PercentageOpenTendering\":{\"displayName\":\"Percentage Open Bids\"},\"Company.Name\":{\"displayName\":\"Procurement Entities\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Company\"}},\"Property\":\"Name\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Company\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"Tender\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"PercentageOpenTendering\"}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"c\",\"Entity\":\"Company\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 336.42,
+          "width": 718.49,
+          "x": 52.87,
+          "y": 373.66,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

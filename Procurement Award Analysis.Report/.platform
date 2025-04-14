@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Procurement Award Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a8543e77-548d-88b1-477c-3a8264b7a20d"
+  }
+}

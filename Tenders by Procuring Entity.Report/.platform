@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Tenders by Procuring Entity"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "72e69c15-5ca2-9389-4a3f-b4ce19db27ba"
+  }
+}

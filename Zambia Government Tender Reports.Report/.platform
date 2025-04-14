@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Zambia Government Tender Reports"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "56530a5e-9d09-94be-4f30-b2adafe1f58a"
+  }
+}
