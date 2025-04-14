@@ -1,0 +1,121 @@
+table TenderItems
+	lineageTag: a2a0eb36-8ee5-4b88-b8d9-14545ebeee5a
+	sourceLineageTag: [tender].[TenderItems]
+
+	column TenderItemId
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 8f7743fa-191e-4393-ad5f-c0fa3f3a8f4a
+		sourceLineageTag: TenderItemId
+		summarizeBy: none
+		sourceColumn: TenderItemId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExternalTenderId
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: bdbb8c0b-7d32-4ab7-98b0-52d4b86169ff
+		sourceLineageTag: ExternalTenderId
+		summarizeBy: none
+		sourceColumn: ExternalTenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f868b9de-8410-4806-a21d-394d53f1242b
+		sourceLineageTag: ProductId
+		summarizeBy: count
+		sourceColumn: ProductId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: double
+		sourceProviderType: decimal(18, 2)
+		lineageTag: 6e42bf2a-9ff9-4b46-8f0d-8dfbbd90fd6c
+		sourceLineageTag: Quantity
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitName
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 6c3aa1a5-5f26-4194-8e16-4e25f43ccd26
+		sourceLineageTag: UnitName
+		summarizeBy: none
+		sourceColumn: UnitName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExternalItemId
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 2c3bed7c-e661-4825-9042-15d349209cbd
+		sourceLineageTag: ExternalItemId
+		summarizeBy: none
+		sourceColumn: ExternalItemId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BuyerId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dacf2ba0-d800-48ac-8919-e199de065462
+		sourceLineageTag: BuyerId
+		summarizeBy: count
+		sourceColumn: BuyerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 23e7c5e4-ff57-4f6d-adf2-88f22a954e99
+		sourceLineageTag: TenderDate
+		summarizeBy: none
+		sourceColumn: TenderDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderAmount
+		dataType: double
+		sourceProviderType: decimal(18, 2)
+		lineageTag: 0ec3aeed-5f5f-4371-9eb9-c36b32aad96a
+		sourceLineageTag: TenderAmount
+		summarizeBy: sum
+		sourceColumn: TenderAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TenderId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b8c68f9d-7dfc-41a1-9f19-cfb48ff2a494
+		sourceLineageTag: TenderId
+		summarizeBy: count
+		sourceColumn: TenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TenderItems = entity
+		mode: directLake
+		source
+			entityName: TenderItems
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

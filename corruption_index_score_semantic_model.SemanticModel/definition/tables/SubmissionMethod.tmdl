@@ -1,0 +1,44 @@
+table SubmissionMethod
+	lineageTag: e5428843-3fa0-49c1-9b42-858c8dbe6efc
+	sourceLineageTag: [tender].[SubmissionMethod]
+
+	column SubmissionMethodId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 38c8b3bf-7bbf-47fe-9a33-fd034cfd25a5
+		sourceLineageTag: SubmissionMethodId
+		summarizeBy: none
+		sourceColumn: SubmissionMethodId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(200)
+		lineageTag: b72f39b1-4527-4517-aa65-70c82dd12c92
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(1000)
+		lineageTag: 6c123089-66ec-4cdb-b9ad-d5bf29989e21
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SubmissionMethod = entity
+		mode: directLake
+		source
+			entityName: SubmissionMethod
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

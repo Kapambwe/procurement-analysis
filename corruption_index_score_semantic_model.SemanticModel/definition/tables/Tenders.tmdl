@@ -1,0 +1,138 @@
+table Tenders
+	lineageTag: 8f1e1288-27e8-47c5-ba13-602315d90a22
+	sourceLineageTag: [tender].[Tenders]
+
+	column TenderId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 68e2645d-2b6b-49b4-9467-7a0ea33bf657
+		sourceLineageTag: TenderId
+		summarizeBy: count
+		sourceColumn: TenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 58a587e1-c95c-4ec8-ba63-f09714a1b8d7
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: decimal(18, 0)
+		lineageTag: 11d73971-71a5-4792-b25c-4fd040079521
+		sourceLineageTag: Amount
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+	column BudgetAmount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: decimal(18, 0)
+		lineageTag: 690d2dbb-bcdf-4716-a8ce-217b647e4be5
+		sourceLineageTag: BudgetAmount
+		summarizeBy: sum
+		sourceColumn: BudgetAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d0bed31d-bfda-471e-9763-0fbd2710e9fc
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExternalId
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a0a38f29-fa0b-4589-883f-60a30b850c06
+		sourceLineageTag: ExternalId
+		summarizeBy: none
+		sourceColumn: ExternalId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReleaseData
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 425c7d4c-b423-4e7b-a73f-97114c390689
+		sourceLineageTag: ReleaseData
+		summarizeBy: none
+		sourceColumn: ReleaseData
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReleaseOcid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4bbd848d-4b58-4fe8-b379-a2d8815a0c72
+		sourceLineageTag: ReleaseOcid
+		summarizeBy: none
+		sourceColumn: ReleaseOcid
+
+		annotation SummarizationSetBy = Automatic
+
+	column InitiationType
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 131914c0-97f7-45fd-866d-3d2f574f15d7
+		sourceLineageTag: InitiationType
+		summarizeBy: none
+		sourceColumn: InitiationType
+
+		annotation SummarizationSetBy = Automatic
+
+	column BudgetCurrencyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a07d358d-318c-459d-957f-07568ca974c5
+		sourceLineageTag: BudgetCurrencyId
+		summarizeBy: count
+		sourceColumn: BudgetCurrencyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderCurrencyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d412a30a-6691-4333-945d-a2ecf913ac02
+		sourceLineageTag: TenderCurrencyId
+		summarizeBy: count
+		sourceColumn: TenderCurrencyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BudgetDescription
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 290484aa-85eb-47bf-a3fc-2e4a70af8a89
+		sourceLineageTag: BudgetDescription
+		summarizeBy: none
+		sourceColumn: BudgetDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tenders = entity
+		mode: directLake
+		source
+			entityName: Tenders
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

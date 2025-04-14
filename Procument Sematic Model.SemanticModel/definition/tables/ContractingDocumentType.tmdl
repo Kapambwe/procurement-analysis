@@ -1,0 +1,55 @@
+table ContractingDocumentType
+	lineageTag: 6a99f925-9f49-4db9-9e72-264757ba1772
+	sourceLineageTag: [tender].[ContractingDocumentType]
+
+	column ContractingDocumentTypeId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fa548c09-d8f1-4eba-847a-0473357a2f72
+		sourceLineageTag: ContractingDocumentTypeId
+		summarizeBy: count
+		sourceColumn: ContractingDocumentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Section
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: d48d5f5e-0940-4bbb-829d-1f8eaae598eb
+		sourceLineageTag: Section
+		summarizeBy: none
+		sourceColumn: Section
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 2bdd25a0-0fb8-400a-bd7c-a3ec5b28593b
+		sourceLineageTag: Category
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocumentTypeId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 16f39114-3ac8-4b07-a531-070d0725c6ec
+		sourceLineageTag: DocumentTypeId
+		summarizeBy: count
+		sourceColumn: DocumentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ContractingDocumentType = entity
+		mode: directLake
+		source
+			entityName: ContractingDocumentType
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

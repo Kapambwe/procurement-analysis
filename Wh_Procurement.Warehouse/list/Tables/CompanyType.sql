@@ -1,0 +1,10 @@
+CREATE TABLE [list].[CompanyType] (
+
+	[CompanyTypeId] int NOT NULL, 
+	[Name] varchar(50) NOT NULL, 
+	[IsActive] bit NULL
+);
+
+
+GO
+ALTER TABLE [list].[CompanyType] ADD CONSTRAINT PK_CompanyType primary key NONCLUSTERED ([CompanyTypeId]);

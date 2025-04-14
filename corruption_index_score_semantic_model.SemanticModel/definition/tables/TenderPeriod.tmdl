@@ -1,0 +1,59 @@
+table TenderPeriod
+	lineageTag: 0127103d-1213-454d-aadd-578067184bdd
+	sourceLineageTag: [tender].[TenderPeriod]
+	dataCategory: Time
+
+	column TenderPeriodId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7a8ae9b2-a794-4673-a935-9e0f2e16260f
+		sourceLineageTag: TenderPeriodId
+		summarizeBy: none
+		sourceColumn: TenderPeriodId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		dataType: dateTime
+		isKey
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b7f30be4-de83-4dbd-94e2-2efb7d5431b3
+		sourceLineageTag: StartDate
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: e3d8038d-a417-4a7e-ab70-7451a614e4cc
+		sourceLineageTag: EndDate
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderYear
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 61e1399b-74f9-4342-84e5-56ef3ee2516a
+		sourceLineageTag: TenderYear
+		summarizeBy: none
+		sourceColumn: TenderYear
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TenderPeriod = entity
+		mode: directLake
+		source
+			entityName: TenderPeriod
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

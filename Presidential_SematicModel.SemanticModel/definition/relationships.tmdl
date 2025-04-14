@@ -1,0 +1,83 @@
+relationship 5c09d576-7dce-bcdb-26a4-c8cb86bb450e
+	relyOnReferentialIntegrity
+	fromColumn: Tender.TenderStatusId
+	toColumn: TenderStatus.TenderStatusId
+
+relationship 7d777120-ff26-0e66-5022-6cc1159efd50
+	relyOnReferentialIntegrity
+	fromColumn: Tender.AwardCriteriaId
+	toColumn: AwardCriteria.AwardCriteriaId
+
+relationship 343095b3-d72a-1f96-a872-1435dc869809
+	relyOnReferentialIntegrity
+	fromColumn: Tender.AwardCriteriaDetailId
+	toColumn: AwardCriteriaDetail.AwardCriteriaDetailId
+
+relationship 83dd2984-1e5d-d899-5e69-b6ca5516573d
+	relyOnReferentialIntegrity
+	fromColumn: Tender.ProcuringCompanyId
+	toColumn: Company.CompanyId
+
+relationship 53e0eea4-b9b7-bac2-1149-1c75e3f8bb00
+	relyOnReferentialIntegrity
+	fromColumn: Tender.EligibilityCriteriaId
+	toColumn: EligibilityCriteria.EligibilityCriteriaId
+
+relationship 68082d34-51a6-8b41-d35d-b3c60376d9bc
+	relyOnReferentialIntegrity
+	fromColumn: Tender.ProcurementMethodRationaleId
+	toColumn: ProcurementMethodRationale.ProcurementMethodRationaleId
+
+relationship 7f8855e1-8f56-1168-ec8a-a1abd67eaad8
+	relyOnReferentialIntegrity
+	fromColumn: Tender.ProcurementMethodId
+	toColumn: ProcurementMethod.ProcurementMethodId
+
+relationship f78eed26-7066-d876-b3bc-9402b013f8df
+	relyOnReferentialIntegrity
+	fromColumn: Tender.ProductId
+	toColumn: Product.ProductId
+
+relationship 2f54b894-d6f5-9483-4e73-fe28662fe9d2
+	relyOnReferentialIntegrity
+	fromColumn: Tender.SubmissionMethodId
+	toColumn: SubmissionMethod.SubmissionMethodId
+
+relationship e6c1c8e2-c29c-233f-aff8-d3895107d009
+	relyOnReferentialIntegrity
+	fromColumn: Tender.TenderPeriodId
+	toColumn: TenderPeriod.TenderPeriodId
+
+relationship 29d21fcb-6b8b-5a02-4ef3-8d091ec6b578
+	relyOnReferentialIntegrity
+	fromColumn: Company.BusinessTypeId
+	toColumn: BusinessType.BusinessTypeId
+
+relationship a4207ded-b45a-3344-55e5-c02809408f89
+	relyOnReferentialIntegrity
+	fromColumn: Company.CompanyTypeId
+	toColumn: CompanyType.CompanyTypeId
+
+relationship 91415f44-514e-e577-bcc6-9fb50e3a18b0
+	relyOnReferentialIntegrity
+	fromColumn: Company.CountryId
+	toColumn: Country.CountryId
+
+relationship 89093c98-78f1-b5d3-faf1-c39efd86e62b
+	relyOnReferentialIntegrity
+	fromColumn: Country.ContinentId
+	toColumn: Continent.ContinentId
+
+relationship 1ab67bab-91ef-7260-40a4-63b48fb1cf2b
+	fromColumn: AwardContract.TenderId
+	toColumn: Tenders.TenderId
+
+relationship 455ec7d0-66f7-81c8-b307-41110821dfc3
+	isActive: false
+	fromColumn: AwardContract.AwardedId
+	toColumn: Company.CompanyId
+
+relationship bcee16b1-7733-fea7-734d-59a24910b80a
+	fromColumn: AwardContract.BuyerId
+	toColumn: Company.CompanyId
+

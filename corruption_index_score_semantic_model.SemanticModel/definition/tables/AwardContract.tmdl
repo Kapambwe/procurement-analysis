@@ -1,0 +1,327 @@
+table AwardContract
+	isHidden
+	lineageTag: ec1d3342-cb87-4b9c-9461-ea9c907e2b13
+	sourceLineageTag: [tender].[AwardContract]
+
+	measure LimitedTenderingTenders = CALCULATE(COUNTROWS(Tender), Tender[ProcurementMethodId] = 1)
+		formatString: 0
+		lineageTag: 56d66713-c1fe-43ec-96b6-279d561abd72
+
+		changedProperty = Name
+
+	column AwardContractId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6ef7cfaf-24c7-4a83-baae-e50d7b3ea50f
+		sourceLineageTag: AwardContractId
+		summarizeBy: count
+		sourceColumn: AwardContractId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(255)
+		lineageTag: ba459195-e551-42ad-bef3-103f7dc84eb6
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 49d93474-1705-4f8e-9f0d-11c93fa27674
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExternalAwardId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cc8b757e-10e6-4a8f-ba26-88bd41fdda58
+		sourceLineageTag: ExternalAwardId
+		summarizeBy: count
+		sourceColumn: ExternalAwardId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderStatusId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a85ca4ee-3d22-43cc-9ce6-bd5bdfc84e9b
+		sourceLineageTag: TenderStatusId
+		summarizeBy: count
+		sourceColumn: TenderStatusId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 43394caf-595b-4865-b836-7b7d2fd797cc
+		sourceLineageTag: TenderId
+		summarizeBy: none
+		sourceColumn: TenderId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AwardAmount
+		dataType: double
+		isHidden
+		sourceProviderType: decimal(18, 2)
+		lineageTag: 47bde732-d3d8-4458-ad3c-b153c338126c
+		sourceLineageTag: AwardAmount
+		summarizeBy: sum
+		sourceColumn: AwardAmount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CurrencyId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 74499014-b8ac-4b0d-981c-8cc2ebfbc0b6
+		sourceLineageTag: CurrencyId
+		summarizeBy: count
+		sourceColumn: CurrencyId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BuyerId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3d9a1393-05da-4855-b286-e0dffdda4c95
+		sourceLineageTag: BuyerId
+		summarizeBy: count
+		sourceColumn: BuyerId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AwardedId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4e20d1cb-deda-4de9-b3ca-2a47d35b9f1d
+		sourceLineageTag: AwardedId
+		summarizeBy: count
+		sourceColumn: AwardedId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 79226947-53ca-4016-a7a9-140ba65912fa
+		sourceLineageTag: Quantity
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c43642ab-6dd2-4ff8-bf14-473be8f941a8
+		sourceLineageTag: ProductId
+		summarizeBy: count
+		sourceColumn: ProductId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AwardDate
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 1ab24cb2-bbf3-4bb7-b2e1-cc25a3f3257d
+		sourceLineageTag: AwardDate
+		summarizeBy: none
+		sourceColumn: AwardDate
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractDateSigned
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 95538b0b-258e-476e-9e5e-beee6b5127f6
+		sourceLineageTag: ContractDateSigned
+		summarizeBy: none
+		sourceColumn: ContractDateSigned
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractName
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(255)
+		lineageTag: 5ea45901-7a0f-482b-a66a-b172933024fb
+		sourceLineageTag: ContractName
+		summarizeBy: none
+		sourceColumn: ContractName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractDescription
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 4614521b-0298-4c75-835d-e872e43d6097
+		sourceLineageTag: ContractDescription
+		summarizeBy: none
+		sourceColumn: ContractDescription
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractAmount
+		dataType: double
+		isHidden
+		sourceProviderType: decimal(18, 2)
+		lineageTag: 98129b52-76ee-46a5-917d-d8a8d632904e
+		sourceLineageTag: ContractAmount
+		summarizeBy: sum
+		sourceColumn: ContractAmount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ContractCurrencyId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 391870cf-4352-4250-a463-9888642532b7
+		sourceLineageTag: ContractCurrencyId
+		summarizeBy: count
+		sourceColumn: ContractCurrencyId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractProductId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1cf1e47b-753c-4cb8-8c1b-cf797f724ec1
+		sourceLineageTag: ContractProductId
+		summarizeBy: count
+		sourceColumn: ContractProductId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractStatusId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4c324677-37db-4f3a-aebb-d6948cd1054d
+		sourceLineageTag: ContractStatusId
+		summarizeBy: count
+		sourceColumn: ContractStatusId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractorId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5581bea5-650d-4017-b965-fea4ef22335e
+		sourceLineageTag: ContractorId
+		summarizeBy: count
+		sourceColumn: ContractorId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExternalTenderId
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(255)
+		lineageTag: ea3baa4d-fc2d-486b-80e8-db7d5be2bbc9
+		sourceLineageTag: ExternalTenderId
+		summarizeBy: none
+		sourceColumn: ExternalTenderId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AwardContract = entity
+		mode: directLake
+		source
+			entityName: AwardContract
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+

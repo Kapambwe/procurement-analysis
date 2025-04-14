@@ -1,0 +1,34 @@
+table Continent
+	lineageTag: aa9321c9-bf1e-4d98-b0c3-916d8516ed5c
+	sourceLineageTag: [list].[Continent]
+
+	column ContinentId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2901a807-6c27-4531-bbc4-e808d3768fa3
+		sourceLineageTag: ContinentId
+		summarizeBy: count
+		sourceColumn: ContinentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 8acff7d6-154a-4857-a490-bf35985c3b54
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Continent = entity
+		mode: directLake
+		source
+			entityName: Continent
+			schemaName: list
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

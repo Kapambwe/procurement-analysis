@@ -1,0 +1,34 @@
+table PersonRole
+	lineageTag: 7188daaa-b015-4360-9b2b-669630464ee9
+	sourceLineageTag: [tender].[PersonRole]
+
+	column PersonRoleId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 56ba3eb7-1f5e-4053-92e5-16941cbcd49d
+		sourceLineageTag: PersonRoleId
+		summarizeBy: count
+		sourceColumn: PersonRoleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 1f4e81e6-45c2-44bd-83d2-c754c3bcaefc
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PersonRole = entity
+		mode: directLake
+		source
+			entityName: PersonRole
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

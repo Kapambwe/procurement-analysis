@@ -1,0 +1,57 @@
+table CorruptionRiskScore
+	lineageTag: ef70993c-1ec3-47c4-ba27-81224bb426ec
+	sourceLineageTag: [tender].[CorruptionRiskScore]
+
+	column CorruptionRiskScoreId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 74ecea34-f1db-4d34-a10b-63101ecee748
+		sourceLineageTag: CorruptionRiskScoreId
+		summarizeBy: count
+		sourceColumn: CorruptionRiskScoreId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderRedFlagId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6b4bd7d2-eccb-4e1c-a5f4-51a6354080b5
+		sourceLineageTag: TenderRedFlagId
+		summarizeBy: count
+		sourceColumn: TenderRedFlagId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TrackDateTime
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 3ac8a95f-56cd-44e5-b403-a82d9a26864d
+		sourceLineageTag: TrackDateTime
+		summarizeBy: none
+		sourceColumn: TrackDateTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b672e162-c409-4726-9669-c9296e2e547f
+		sourceLineageTag: Value
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CorruptionRiskScore = entity
+		mode: directLake
+		source
+			entityName: CorruptionRiskScore
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

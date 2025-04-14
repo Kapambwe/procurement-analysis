@@ -1,0 +1,50 @@
+model Model
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.133.7404.3 (Main)
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+annotation PBI_ProTooling = ["WebModelingEdit"]
+
+ref table Company
+ref table CompanyType
+ref table Continent
+ref table Country
+ref table CountryRegion
+ref table CountryRegionType
+ref table Currency
+ref table PersonCompany
+ref table AwardCriteria
+ref table AwardCriteriaDetail
+ref table CompanyRole
+ref table ContractingDocumentType
+ref table ContractingStage
+ref table DocumentType
+ref table EligibilityCriteria
+ref table PersonRole
+ref table ProcurementMethod
+ref table ProcurementMethodRationale
+ref table Product
+ref table SubmissionMethod
+ref table SubmissionMethodDetail
+ref table Tender
+ref table TenderCompany
+ref table TenderStatus
+ref table TenderType
+ref table Units
+ref table BusinessType
+ref table EntityType
+ref table Person
+ref table TenderPeriod
+
+ref cultureInfo en-US
+

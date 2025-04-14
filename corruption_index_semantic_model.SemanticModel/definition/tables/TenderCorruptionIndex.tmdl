@@ -1,0 +1,59 @@
+table TenderCorruptionIndex
+	lineageTag: b6bce55f-053e-4088-8cee-268e86f32bff
+	sourceLineageTag: [tender].[TenderCorruptionIndex]
+
+	column TenderCorruptionIndexId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9c2db5d7-49b1-4b34-b827-0dcc67b670d4
+		sourceLineageTag: TenderCorruptionIndexId
+		summarizeBy: count
+		sourceColumn: TenderCorruptionIndexId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a9147d4c-73de-4517-8e44-b6c9a96dca58
+		sourceLineageTag: TenderId
+		summarizeBy: none
+		sourceColumn: TenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CorruptionIndexScore
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		sourceProviderType: decimal(10, 2)
+		lineageTag: 2700ef68-db32-44b1-85c4-1524a3de09ea
+		sourceLineageTag: CorruptionIndexScore
+		summarizeBy: sum
+		sourceColumn: CorruptionIndexScore
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column TrackDateTime
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: e4b58ddd-dcc4-4c17-af12-523ac94184f3
+		sourceLineageTag: TrackDateTime
+		summarizeBy: none
+		sourceColumn: TrackDateTime
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TenderCorruptionIndex = entity
+		mode: directLake
+		source
+			entityName: TenderCorruptionIndex
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,46 @@
+relationship 3aa32a6a-3940-4906-f86c-e0d79d286e22
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Tender.TenderId
+	toColumn: TenderCorruptionIndex.TenderId
+
+relationship 54eb15f3-3b04-bd09-1084-f802637ab2fc
+	fromColumn: Tender.AwardCriteriaId
+	toColumn: AwardCriteria.AwardCriteriaId
+
+relationship 72b8977b-1953-82f4-f58d-3d28a13e0fe3
+	fromColumn: Tender.TenderPeriodId
+	toColumn: TenderPeriod.TenderPeriodId
+
+relationship 21d148cf-be49-fb56-fec8-080362a40be7
+	fromColumn: Tender.SubmissionMethodId
+	toColumn: SubmissionMethod.SubmissionMethodId
+
+relationship aa2db303-fbee-dd04-787b-c44da975f1ea
+	fromColumn: Tender.TenderStatusId
+	toColumn: TenderStatus.TenderStatusId
+
+relationship 8db4182e-6530-5d00-ce85-2f56aa2c3bdf
+	fromColumn: Tender.ProcurementMethodId
+	toColumn: ProcurementMethod.ProcurementMethodId
+
+relationship aec3d195-0e56-99c4-5bb5-9e610927147a
+	fromColumn: Tender.ProcuringCompanyId
+	toColumn: Company.CompanyId
+
+relationship 780348db-26dc-4d35-fb44-8656a2958ca5
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: AwardContract.TenderId
+	toColumn: Tender.CurrencyId
+
+relationship 2ec74881-c8bc-c68d-9644-85b3e912d185
+	isActive: false
+	fromColumn: AwardContract.AwardedId
+	toColumn: Company.CompanyId
+
+relationship aa8061bc-55e8-313d-3f7d-70fc88a4ae5c
+	isActive: false
+	fromColumn: AwardContract.TenderStatusId
+	toColumn: TenderStatus.TenderStatusId
+

@@ -1,0 +1,84 @@
+table Product
+	lineageTag: dbebd26d-7b97-4cb6-b2b7-7e24bd35cf48
+	sourceLineageTag: [tender].[Product]
+
+	column ProductId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 095ecbcc-00f7-4ebb-b801-972e986490f7
+		sourceLineageTag: ProductId
+		summarizeBy: count
+		sourceColumn: ProductId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(1000)
+		lineageTag: 10f4843f-476f-45f2-aa69-ffb51226b499
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(4000)
+		lineageTag: 09eb5199-afbe-48dd-8be3-8bf83798e24f
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Classification
+		dataType: string
+		sourceProviderType: varchar(1000)
+		lineageTag: f3f16cd7-98fb-47fd-8820-b57c2240baf1
+		sourceLineageTag: Classification
+		summarizeBy: none
+		sourceColumn: Classification
+
+		annotation SummarizationSetBy = Automatic
+
+	column Scheme
+		dataType: string
+		sourceProviderType: varchar(1000)
+		lineageTag: e7853c85-f33f-47c0-86f6-5cfeb7f4d90e
+		sourceLineageTag: Scheme
+		summarizeBy: none
+		sourceColumn: Scheme
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExternalId
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 1166b97d-3722-443d-8cac-9cd2c0ea9aea
+		sourceLineageTag: ExternalId
+		summarizeBy: none
+		sourceColumn: ExternalId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uri
+		dataType: string
+		sourceProviderType: varchar(1000)
+		lineageTag: ae2a478b-aeb5-41a1-a742-cb0ad92e2302
+		sourceLineageTag: Uri
+		summarizeBy: none
+		sourceColumn: Uri
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Product = entity
+		mode: directLake
+		source
+			entityName: Product
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

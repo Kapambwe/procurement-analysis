@@ -1,0 +1,44 @@
+table TenderStatus
+	lineageTag: f02a1a11-0062-467c-89d3-daf4f1dac793
+	sourceLineageTag: [tender].[TenderStatus]
+
+	column TenderStatusId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b044b3dc-e60b-4ec5-b483-4a0632d2997c
+		sourceLineageTag: TenderStatusId
+		summarizeBy: none
+		sourceColumn: TenderStatusId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(200)
+		lineageTag: 6c9c4dec-b522-4bea-8892-3d3d2ae7ae45
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(1000)
+		lineageTag: 1952adbc-6128-4c6c-bf1e-485c2b82ef32
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TenderStatus = entity
+		mode: directLake
+		source
+			entityName: TenderStatus
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

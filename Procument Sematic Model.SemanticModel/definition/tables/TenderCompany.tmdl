@@ -1,0 +1,91 @@
+table TenderCompany
+	lineageTag: 4d8d39fa-db93-4b01-b4be-30901a6b4c56
+	sourceLineageTag: [tender].[TenderCompany]
+
+	column TenderCompanyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f4ab9bc1-d126-4a8d-972d-741490e83adc
+		sourceLineageTag: TenderCompanyId
+		summarizeBy: count
+		sourceColumn: TenderCompanyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3080aea1-eb63-4bd7-8049-8aeb56f85e67
+		sourceLineageTag: CompanyId
+		summarizeBy: count
+		sourceColumn: CompanyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2ddcf8ce-e7ae-4288-8473-f20999adb8e8
+		sourceLineageTag: TenderId
+		summarizeBy: count
+		sourceColumn: TenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyRoleId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d012ebcf-18d8-4f15-8000-e2db4ab0294f
+		sourceLineageTag: CompanyRoleId
+		summarizeBy: count
+		sourceColumn: CompanyRoleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractingStageId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 85add50e-4a41-43fc-8a7f-b204665c5ac5
+		sourceLineageTag: ContractingStageId
+		summarizeBy: count
+		sourceColumn: ContractingStageId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: double
+		sourceProviderType: decimal(18, 3)
+		lineageTag: ef9b50b9-b2d5-48a3-a42a-aeede2f5b090
+		sourceLineageTag: Amount
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DateSigned
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 25c49c63-f254-46b1-93a7-1d384d2bf77a
+		sourceLineageTag: DateSigned
+		summarizeBy: none
+		sourceColumn: DateSigned
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TenderCompany = entity
+		mode: directLake
+		source
+			entityName: TenderCompany
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,44 @@
+table EligibilityCriteria
+	lineageTag: e37505cc-58af-47c3-93e0-381afbf909d6
+	sourceLineageTag: [tender].[EligibilityCriteria]
+
+	column EligibilityCriteriaId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f561d21a-5d86-46a4-ab35-878ff128be78
+		sourceLineageTag: EligibilityCriteriaId
+		summarizeBy: none
+		sourceColumn: EligibilityCriteriaId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f5683252-2462-468e-8fdc-d070239c3a4b
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b30411e7-6008-4745-9641-efe9da83b64a
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition EligibilityCriteria = entity
+		mode: directLake
+		source
+			entityName: EligibilityCriteria
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,77 @@
+table AwardTender
+	lineageTag: 0eecea8a-4872-474d-8112-b425ad694b6a
+	sourceLineageTag: [tender].[AwardTender]
+
+	column AwardTenderId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8b0d7cf6-57f1-483a-8ccb-6ca63e2996d8
+		sourceLineageTag: AwardTenderId
+		summarizeBy: count
+		sourceColumn: AwardTenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(200)
+		lineageTag: 9c05524d-cd0a-4dbe-8e5f-5a765f04226b
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(4000)
+		lineageTag: 9be6e3f8-e466-4325-a4d9-a374348de932
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column AwardStatus
+		dataType: string
+		sourceProviderType: varchar(200)
+		lineageTag: 0ff3cc6c-f768-4ac2-896d-016bc68f1d27
+		sourceLineageTag: AwardStatus
+		summarizeBy: none
+		sourceColumn: AwardStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column AwardDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 8fefa69d-61ef-41e9-b525-66502dc51296
+		sourceLineageTag: AwardDate
+		summarizeBy: none
+		sourceColumn: AwardDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column AwardAmount
+		dataType: double
+		sourceProviderType: decimal(18, 2)
+		lineageTag: 0632da23-a1cd-44c8-87b1-44892f80eefd
+		sourceLineageTag: AwardAmount
+		summarizeBy: sum
+		sourceColumn: AwardAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition AwardTender = entity
+		mode: directLake
+		source
+			entityName: AwardTender
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

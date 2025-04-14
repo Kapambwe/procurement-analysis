@@ -1,0 +1,274 @@
+table Tender
+	lineageTag: b87fce55-df13-4610-bc29-b0b0511a46d2
+	sourceLineageTag: [tender].[Tender]
+
+	column TenderId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b0c5898f-4d65-46fb-bc91-d3aad2a1ab52
+		sourceLineageTag: TenderId
+		summarizeBy: count
+		sourceColumn: TenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: double
+		sourceProviderType: decimal(20, 4)
+		lineageTag: d4f7273a-6724-4219-babf-4d39493ad156
+		sourceLineageTag: Amount
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 54037dad-27c8-4bda-9677-8928f9aab004
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 55e9cc2a-77ba-40b8-bb35-f9d6eb26ed53
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column EquiryPeriodId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7730ae94-c829-4319-b4d3-16c69b903c69
+		sourceLineageTag: EquiryPeriodId
+		summarizeBy: count
+		sourceColumn: EquiryPeriodId
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasEquiry
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: d3819a69-9719-4114-86ac-ef388c16f41e
+		sourceLineageTag: HasEquiry
+		summarizeBy: none
+		sourceColumn: HasEquiry
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubmittionMethodDetail
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dd5e39be-d7f3-4723-9e69-3d6dd6d57fe8
+		sourceLineageTag: SubmittionMethodDetail
+		summarizeBy: none
+		sourceColumn: SubmittionMethodDetail
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberofTenderers
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 223112e7-e677-488c-89e5-bf676b8f106b
+		sourceLineageTag: NumberofTenderers
+		summarizeBy: sum
+		sourceColumn: NumberofTenderers
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderPeriodId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9316d446-9c2d-48d9-9e8c-cdd1edda4313
+		sourceLineageTag: TenderPeriodId
+		summarizeBy: none
+		sourceColumn: TenderPeriodId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 259d9df7-f853-4de0-9d12-a295a9c32f09
+		sourceLineageTag: CurrencyId
+		summarizeBy: none
+		sourceColumn: CurrencyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExternalId
+		dataType: string
+		sourceProviderType: varchar(1000)
+		lineageTag: d6506592-5b5e-433a-ac40-dab884ad90aa
+		sourceLineageTag: ExternalId
+		summarizeBy: none
+		sourceColumn: ExternalId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AwardCriteriaId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 083fff12-2a75-4619-94cf-69ce1ec68f38
+		sourceLineageTag: AwardCriteriaId
+		summarizeBy: none
+		sourceColumn: AwardCriteriaId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AwardCriteriaDetailId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cfb379ef-02e2-4030-a4ea-c5e365ba0f9f
+		sourceLineageTag: AwardCriteriaDetailId
+		summarizeBy: none
+		sourceColumn: AwardCriteriaDetailId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EligibilityCriteriaId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d0df0842-25f0-4d59-bd30-0e8581a875d8
+		sourceLineageTag: EligibilityCriteriaId
+		summarizeBy: none
+		sourceColumn: EligibilityCriteriaId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProcurementMethodId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f85a8853-df58-4a3d-8fef-01656e2c92c8
+		sourceLineageTag: ProcurementMethodId
+		summarizeBy: none
+		sourceColumn: ProcurementMethodId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProcurementMethodRationaleId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4aacd510-5c9e-4863-9940-ff0149c4a3f8
+		sourceLineageTag: ProcurementMethodRationaleId
+		summarizeBy: none
+		sourceColumn: ProcurementMethodRationaleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubmissionMethodId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 59558902-ce55-49e9-8ae4-8708d9f75f64
+		sourceLineageTag: SubmissionMethodId
+		summarizeBy: none
+		sourceColumn: SubmissionMethodId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubmittionMethodDetailId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cdb4219a-dcc3-46c2-b230-9933850a6fb2
+		sourceLineageTag: SubmittionMethodDetailId
+		summarizeBy: count
+		sourceColumn: SubmittionMethodDetailId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderStatusId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bed32457-f48f-45b4-95a8-ad59d2561042
+		sourceLineageTag: TenderStatusId
+		summarizeBy: none
+		sourceColumn: TenderStatusId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProcuringCompanyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bdf6eaab-3788-4edb-9831-38c0eaf93e38
+		sourceLineageTag: ProcuringCompanyId
+		summarizeBy: none
+		sourceColumn: ProcuringCompanyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column FundingCompanyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0c15d204-3c1a-4214-a8a5-8f8023604954
+		sourceLineageTag: FundingCompanyId
+		summarizeBy: count
+		sourceColumn: FundingCompanyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b2a28f37-e7b6-4d3a-9289-ecfa00210005
+		sourceLineageTag: ProductId
+		summarizeBy: none
+		sourceColumn: ProductId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		sourceProviderType: decimal(18, 0)
+		lineageTag: 70bdaa8d-a508-4521-b0ca-4b20d01f6d57
+		sourceLineageTag: Quantity
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 74f28dff-0cec-464a-be1f-d692887e9eb5
+		sourceLineageTag: UnitId
+		summarizeBy: count
+		sourceColumn: UnitId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tender = entity
+		mode: directLake
+		source
+			entityName: Tender
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

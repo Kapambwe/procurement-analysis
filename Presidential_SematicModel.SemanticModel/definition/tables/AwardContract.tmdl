@@ -1,0 +1,270 @@
+table AwardContract
+	lineageTag: 5439f5c6-e82b-4835-b2fd-0bd92fd4ba5d
+	sourceLineageTag: [tender].[AwardContract]
+
+	measure CompanyName =
+			
+			CALCULATE(
+			    FIRSTNONBLANK(Company[Name], 1),
+			    USERELATIONSHIP(AwardContract[AwardedId], Company[CompanyId])
+			)
+		lineageTag: 3ac54085-3ac4-4618-880d-6025b5ebab05
+
+		changedProperty = Name
+
+		changedProperty = IsHidden
+
+	column AwardContractId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 358a4ccf-8fb4-4638-9448-4c7643cc1c34
+		sourceLineageTag: AwardContractId
+		summarizeBy: count
+		sourceColumn: AwardContractId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: a8179c32-7e67-4bd1-ac4e-d4e6c11c4d3a
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: def038fe-6e6a-4524-b50f-5d632ca8225c
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExternalAwardId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 328bb1f4-01b9-4bea-ae77-79d49cfc9124
+		sourceLineageTag: ExternalAwardId
+		summarizeBy: count
+		sourceColumn: ExternalAwardId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderStatusId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 39252d3a-6660-4eb3-bb32-7f793be78842
+		sourceLineageTag: TenderStatusId
+		summarizeBy: count
+		sourceColumn: TenderStatusId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 52803ab3-e929-49fd-bdf5-81a0826bc33e
+		sourceLineageTag: TenderId
+		summarizeBy: none
+		sourceColumn: TenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AwardAmount
+		dataType: double
+		sourceProviderType: decimal(18, 2)
+		lineageTag: fe6d3da2-60a2-435a-8de6-8160be8ea707
+		sourceLineageTag: AwardAmount
+		summarizeBy: sum
+		sourceColumn: AwardAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CurrencyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7cb3cfd5-4f40-4ddd-ad9d-3b7487c0468d
+		sourceLineageTag: CurrencyId
+		summarizeBy: count
+		sourceColumn: CurrencyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BuyerId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 53ba0cb8-4318-4b1c-bd17-2e075db203b0
+		sourceLineageTag: BuyerId
+		summarizeBy: none
+		sourceColumn: BuyerId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AwardedId
+		dataType: int64
+		isHidden
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0a716e62-8c45-4fa1-b486-7be5adbff32d
+		sourceLineageTag: AwardedId
+		summarizeBy: count
+		sourceColumn: AwardedId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 213335c8-35ed-41f5-84e8-82261d1a920b
+		sourceLineageTag: Quantity
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 46da739c-bfca-4c3a-94b7-deffdb0c9318
+		sourceLineageTag: ProductId
+		summarizeBy: count
+		sourceColumn: ProductId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AwardDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 0b3c9d66-4e06-4d9c-b331-5d87d315df3e
+		sourceLineageTag: AwardDate
+		summarizeBy: none
+		sourceColumn: AwardDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractDateSigned
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: d4f6dfdf-b7e4-421f-92f4-9e765dee8724
+		sourceLineageTag: ContractDateSigned
+		summarizeBy: none
+		sourceColumn: ContractDateSigned
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractName
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 823f2513-2c31-45d5-9a0e-94a02d1a9340
+		sourceLineageTag: ContractName
+		summarizeBy: none
+		sourceColumn: ContractName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractDescription
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d6c576b6-a251-41ab-b7c5-acb3b1960341
+		sourceLineageTag: ContractDescription
+		summarizeBy: none
+		sourceColumn: ContractDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractAmount
+		dataType: double
+		sourceProviderType: decimal(18, 2)
+		lineageTag: e1b2a39d-3bc8-418f-9aae-848d994436fa
+		sourceLineageTag: ContractAmount
+		summarizeBy: sum
+		sourceColumn: ContractAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ContractCurrencyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f2a5b512-547d-4833-8cb4-62cace52ce73
+		sourceLineageTag: ContractCurrencyId
+		summarizeBy: count
+		sourceColumn: ContractCurrencyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractProductId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 08743df1-8c15-42a4-a221-3161bc754069
+		sourceLineageTag: ContractProductId
+		summarizeBy: count
+		sourceColumn: ContractProductId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractStatusId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bb4eb777-7773-474e-97bf-c51b8775398a
+		sourceLineageTag: ContractStatusId
+		summarizeBy: count
+		sourceColumn: ContractStatusId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractorId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a89aebc5-e03d-493e-b938-3eb87bca15e6
+		sourceLineageTag: ContractorId
+		summarizeBy: count
+		sourceColumn: ContractorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExternalTenderId
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 0e5bf66b-f53e-4da8-b385-215e96db7a4f
+		sourceLineageTag: ExternalTenderId
+		summarizeBy: none
+		sourceColumn: ExternalTenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AwardContract = entity
+		mode: directLake
+		source
+			entityName: AwardContract
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

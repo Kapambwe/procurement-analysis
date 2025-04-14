@@ -1,0 +1,169 @@
+table Company
+	lineageTag: f6caadd6-3a83-4751-8506-fee0cba1f779
+	sourceLineageTag: [company].[Company]
+
+	column CompanyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 30d1e97b-cadc-4d57-845f-f193bff5123b
+		sourceLineageTag: CompanyId
+		summarizeBy: none
+		sourceColumn: CompanyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(1000)
+		lineageTag: 6e3d0def-24ea-4335-8c05-a775c327b2f5
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c3045ead-6b19-4a9e-ac6a-c2d861306c80
+		sourceLineageTag: CountryId
+		summarizeBy: none
+		sourceColumn: CountryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessTypeId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4f381a92-5ce7-4e0e-8ddb-abb2a9afb6a6
+		sourceLineageTag: BusinessTypeId
+		summarizeBy: none
+		sourceColumn: BusinessTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyTypeId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dd2c0bdf-bae8-4c00-b904-4b4e15a5ccef
+		sourceLineageTag: CompanyTypeId
+		summarizeBy: none
+		sourceColumn: CompanyTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 2329c3f4-140e-48a6-958f-1433f7d06d55
+		sourceLineageTag: Address
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: a8a1f5e9-f4ec-48db-9a39-93ff581e17e8
+		sourceLineageTag: Active
+		summarizeBy: none
+		sourceColumn: Active
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhoneNumber
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: fde6c242-1116-4595-a6a7-c57550cc3674
+		sourceLineageTag: PhoneNumber
+		summarizeBy: none
+		sourceColumn: PhoneNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailAddress
+		dataType: string
+		sourceProviderType: varchar(500)
+		lineageTag: 56925a90-dc0a-4ce0-8fc8-4439e9db02dd
+		sourceLineageTag: EmailAddress
+		summarizeBy: none
+		sourceColumn: EmailAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		sourceProviderType: varchar(500)
+		lineageTag: 24ac4d6d-1e67-47cc-8f8a-348972033c8a
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column LegalName
+		dataType: string
+		sourceProviderType: varchar(500)
+		lineageTag: 99e2882f-6982-4817-9d7f-06584f6b0589
+		sourceLineageTag: LegalName
+		summarizeBy: none
+		sourceColumn: LegalName
+
+		annotation SummarizationSetBy = Automatic
+
+	column PostalCode
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: ccd9a06d-d222-4d46-90cf-8797dc741880
+		sourceLineageTag: PostalCode
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentCompanyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 437f76e1-db93-4ba1-9230-dc5c69560520
+		sourceLineageTag: ParentCompanyId
+		summarizeBy: none
+		sourceColumn: ParentCompanyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Locality
+		dataType: string
+		sourceProviderType: varchar(500)
+		lineageTag: 5fa40f2c-47d5-4170-bb9b-874f30373345
+		sourceLineageTag: Locality
+		summarizeBy: none
+		sourceColumn: Locality
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		sourceProviderType: varchar(500)
+		lineageTag: b8fa5df4-29e7-4905-a8ae-1cd76635d05a
+		sourceLineageTag: Region
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Company = entity
+		mode: directLake
+		source
+			entityName: Company
+			schemaName: company
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,44 @@
+table AwardCriteriaDetail
+	lineageTag: 53fcab13-24bd-4a7c-97ce-79b47ba09384
+	sourceLineageTag: [tender].[AwardCriteriaDetail]
+
+	column AwardCriteriaDetailId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dd534a41-ecb1-4b94-a0d2-ad11d06ab36c
+		sourceLineageTag: AwardCriteriaDetailId
+		summarizeBy: none
+		sourceColumn: AwardCriteriaDetailId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: db1ce638-0d1d-419d-a9f6-e00670a6a6be
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a07b3364-8153-47ea-9e57-86a6b5b67f8a
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AwardCriteriaDetail = entity
+		mode: directLake
+		source
+			entityName: AwardCriteriaDetail
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

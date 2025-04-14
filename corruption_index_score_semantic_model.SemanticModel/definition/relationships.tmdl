@@ -1,0 +1,88 @@
+relationship c79df923-1568-c524-8f04-59dfd4ec8b52
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Tender.TenderId
+	toColumn: TenderCorruptionIndex.TenderId
+
+relationship 4e580fdc-cf5c-d625-1e7d-129ca9b402ce
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Tender.TenderId
+	toColumn: AwardContract.TenderId
+
+relationship dbad029e-7621-f5b9-9450-b3839c0582aa
+	fromColumn: Tender.AwardCriteriaDetailId
+	toColumn: AwardCriteriaDetail.AwardCriteriaDetailId
+
+relationship b2243918-3a8b-8014-0b51-3455d6a1072f
+	fromColumn: Tender.AwardCriteriaId
+	toColumn: AwardCriteria.AwardCriteriaId
+
+relationship 69c5e8ef-43e1-49d0-d2c0-1596b11dfea0
+	fromColumn: Tender.CurrencyId
+	toColumn: Currency.CurrencyId
+
+relationship 8321f7f5-8beb-5874-2b5b-2a550191f6e3
+	fromColumn: Tender.EligibilityCriteriaId
+	toColumn: EligibilityCriteria.EligibilityCriteriaId
+
+relationship ed47d146-0561-ac8a-6ced-3ef21bd707d2
+	fromColumn: Tender.ProcurementMethodId
+	toColumn: ProcurementMethod.ProcurementMethodId
+
+relationship b580186c-f1e7-c6e7-a599-25a41c4f00bc
+	fromColumn: Tender.ProcurementMethodRationaleId
+	toColumn: ProcurementMethodRationale.ProcurementMethodRationaleId
+
+relationship ae80d0d7-f922-fc09-c3e2-7a41c88cd589
+	fromColumn: Tender.ProductId
+	toColumn: Product.ProductId
+
+relationship 839d6fb6-7361-c248-355b-d3a1272da3cb
+	fromColumn: Tender.SubmissionMethodId
+	toColumn: SubmissionMethod.SubmissionMethodId
+
+relationship 3c7106de-0134-b52c-2791-c66fb038bedd
+	fromColumn: Tender.SubmittionMethodDetailId
+	toColumn: SubmissionMethodDetail.SubmissionMethodDetailId
+
+relationship 34791626-ec25-13a2-0cc3-56a69f27f734
+	fromColumn: Tender.TenderPeriodId
+	toColumn: TenderPeriod.TenderPeriodId
+
+relationship 8cf107a6-99de-75e8-df1c-b10639940a46
+	fromColumn: Tender.TenderStatusId
+	toColumn: TenderStatus.TenderStatusId
+
+relationship ff6d0a0c-96f4-c1f0-5b0a-c965221970b5
+	fromColumn: Tender.ProcuringCompanyId
+	toColumn: Company.CompanyId
+
+relationship dae73620-e090-5882-6201-8eecc37382cb
+	isActive: false
+	fromColumn: AwardContract.AwardedId
+	toColumn: Company.CompanyId
+
+relationship 7f085e36-08b0-f25d-b7e7-f61bff4387e3
+	isActive: false
+	fromColumn: AwardContract.BuyerId
+	toColumn: Company.CompanyId
+
+relationship 3ee05671-4109-4cd1-92a1-9bdc7ace89ae
+	isActive: false
+	fromColumn: AwardContract.ProductId
+	toColumn: Product.ProductId
+
+relationship d518be68-6656-d097-eee5-8c6cc53e035b
+	fromColumn: Tender.TenderId
+	toColumn: TenderCompany.TenderId
+
+relationship c4abea96-4c12-358f-efea-c05fea6d424a
+	isActive: false
+	fromColumn: TenderCompany.CompanyId
+	toColumn: Company.CompanyId
+
+relationship a2be14c3-4c43-0d83-c96c-1e4216a7fa37
+	fromColumn: TenderCompany.CompanyRoleId
+	toColumn: CompanyRole.CompanyRoleId
+

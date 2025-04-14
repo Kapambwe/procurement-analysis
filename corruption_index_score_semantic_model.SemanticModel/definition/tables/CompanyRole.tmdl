@@ -1,0 +1,64 @@
+table CompanyRole
+	lineageTag: 90dafe00-b3e1-4cef-bd0c-7a0195745c50
+	sourceLineageTag: [tender].[CompanyRole]
+
+	column CompanyRoleId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0175e7e3-1027-4e02-be8d-84e44fe49823
+		sourceLineageTag: CompanyRoleId
+		summarizeBy: none
+		sourceColumn: CompanyRoleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 73934757-a170-43eb-9dfe-42808d8b95b2
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 25240a55-4c89-4a4d-b24f-4628ac48796c
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Code
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 9c884609-8336-4e39-b9e6-2b422cbb3aee
+		sourceLineageTag: Code
+		summarizeBy: none
+		sourceColumn: Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column RelationShipName
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 8f8b7bd4-44b3-48bc-9463-b101085634c8
+		sourceLineageTag: RelationShipName
+		summarizeBy: none
+		sourceColumn: RelationShipName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CompanyRole = entity
+		mode: directLake
+		source
+			entityName: CompanyRole
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

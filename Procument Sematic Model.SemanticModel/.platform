@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Procument Sematic Model"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d8827eb5-586f-907d-46b7-0385a1df5e5e"
+  }
+}

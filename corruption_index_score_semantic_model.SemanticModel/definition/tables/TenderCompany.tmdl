@@ -1,0 +1,68 @@
+table TenderCompany
+	lineageTag: a779197e-3ee2-4bab-baf0-ad79d9540ac0
+	sourceLineageTag: [tender].[TenderCompany]
+
+	column TenderCompanyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f92f4d3c-0c4a-46d3-8576-44bbd6f21b41
+		sourceLineageTag: TenderCompanyId
+		summarizeBy: count
+		sourceColumn: TenderCompanyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyRoleId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f416e6c5-135e-45c0-866e-f85eb2f7c56a
+		sourceLineageTag: CompanyRoleId
+		summarizeBy: none
+		sourceColumn: CompanyRoleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClosingDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 7fcd84ce-70e3-4663-aa0c-e73ddcd53b0b
+		sourceLineageTag: ClosingDate
+		summarizeBy: none
+		sourceColumn: ClosingDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 932b7e76-e00b-4584-b56a-069f319c9778
+		sourceLineageTag: TenderId
+		summarizeBy: none
+		sourceColumn: TenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 57f38385-d193-44b6-98fb-8cc158170672
+		sourceLineageTag: CompanyId
+		summarizeBy: count
+		sourceColumn: CompanyId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TenderCompany = entity
+		mode: directLake
+		source
+			entityName: TenderCompany
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

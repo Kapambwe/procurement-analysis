@@ -1,0 +1,34 @@
+table EntityType
+	lineageTag: 924f99f7-68f2-4de4-a108-56c62704a15f
+	sourceLineageTag: [list].[EntityType]
+
+	column EntityTypeId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 45bee9cd-c4f2-4604-9c29-9fda2335c36c
+		sourceLineageTag: EntityTypeId
+		summarizeBy: count
+		sourceColumn: EntityTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(4000)
+		lineageTag: 6a6ad405-42b2-484a-8362-434b762b35a9
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition EntityType = entity
+		mode: directLake
+		source
+			entityName: EntityType
+			schemaName: list
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

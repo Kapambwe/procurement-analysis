@@ -1,0 +1,34 @@
+table CountryRegionType
+	lineageTag: d60a5ef5-1b86-48d6-95c8-9a831ec29ec5
+	sourceLineageTag: [list].[CountryRegionType]
+
+	column CountryRegionTypeId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e23d8470-f63f-4de0-ab23-88abb237e23a
+		sourceLineageTag: CountryRegionTypeId
+		summarizeBy: count
+		sourceColumn: CountryRegionTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 9bbf41f2-34f8-477f-88b2-a5316f03fa98
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CountryRegionType = entity
+		mode: directLake
+		source
+			entityName: CountryRegionType
+			schemaName: list
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

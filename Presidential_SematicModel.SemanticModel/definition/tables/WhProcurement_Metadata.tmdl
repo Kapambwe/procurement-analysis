@@ -1,0 +1,185 @@
+table WhProcurement_Metadata
+	lineageTag: 7019b9b4-773b-44c9-8637-0759458190aa
+	sourceLineageTag: [meta].[WhProcurement_Metadata]
+
+	column TargetSchema
+		dataType: string
+		sourceProviderType: varchar(25)
+		lineageTag: f25ae826-5a42-4e64-8f81-53136b743045
+		sourceLineageTag: TargetSchema
+		summarizeBy: none
+		sourceColumn: TargetSchema
+
+		annotation SummarizationSetBy = Automatic
+
+	column TargetTable
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: b235331b-4fc4-45d8-938d-9bb3b9e74cb8
+		sourceLineageTag: TargetTable
+		summarizeBy: none
+		sourceColumn: TargetTable
+
+		annotation SummarizationSetBy = Automatic
+
+	column SourceSchema
+		dataType: string
+		sourceProviderType: varchar(25)
+		lineageTag: e5cc7be7-c1fe-4960-a204-66f20c2d36a8
+		sourceLineageTag: SourceSchema
+		summarizeBy: none
+		sourceColumn: SourceSchema
+
+		annotation SummarizationSetBy = Automatic
+
+	column SourceTable
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: f3ca8079-adc4-43d5-8728-1ef65d8c476c
+		sourceLineageTag: SourceTable
+		summarizeBy: none
+		sourceColumn: SourceTable
+
+		annotation SummarizationSetBy = Automatic
+
+	column StagingSchema
+		dataType: string
+		sourceProviderType: varchar(25)
+		lineageTag: cc56dc6b-2236-4e31-8b5b-fb97b5b040e9
+		sourceLineageTag: StagingSchema
+		summarizeBy: none
+		sourceColumn: StagingSchema
+
+		annotation SummarizationSetBy = Automatic
+
+	column StagingTable
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: a952a644-7efe-46dd-a5a1-1c6f77139bcc
+		sourceLineageTag: StagingTable
+		summarizeBy: none
+		sourceColumn: StagingTable
+
+		annotation SummarizationSetBy = Automatic
+
+	column StagingDatabase
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 9296c689-3ae6-4cea-b9a2-39ab9898fc81
+		sourceLineageTag: StagingDatabase
+		summarizeBy: none
+		sourceColumn: StagingDatabase
+
+		annotation SummarizationSetBy = Automatic
+
+	column LoadType
+		dataType: string
+		sourceProviderType: varchar(25)
+		lineageTag: 2d0c5107-6d97-4d40-b1cc-3810d77350f3
+		sourceLineageTag: LoadType
+		summarizeBy: none
+		sourceColumn: LoadType
+
+		annotation SummarizationSetBy = Automatic
+
+	column LoadIndicator
+		dataType: string
+		sourceProviderType: varchar(25)
+		lineageTag: 1cf901b6-06f8-476e-98f4-79f0ab91c7d1
+		sourceLineageTag: LoadIndicator
+		summarizeBy: none
+		sourceColumn: LoadIndicator
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETLStrategy
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: fa409b8e-ddc8-4b01-84c9-bfd5d0176e95
+		sourceLineageTag: ETLStrategy
+		summarizeBy: none
+		sourceColumn: ETLStrategy
+
+		annotation SummarizationSetBy = Automatic
+
+	column SourceStoredProcedureName
+		dataType: string
+		sourceProviderType: varchar(500)
+		lineageTag: f7005191-8c48-40c4-b34d-122a2a8ec186
+		sourceLineageTag: SourceStoredProcedureName
+		summarizeBy: none
+		sourceColumn: SourceStoredProcedureName
+
+		annotation SummarizationSetBy = Automatic
+
+	column TargetStoredProcedureName
+		dataType: string
+		sourceProviderType: varchar(500)
+		lineageTag: 5564cf5a-5fb7-4eb0-a1b8-15e5e32e2989
+		sourceLineageTag: TargetStoredProcedureName
+		summarizeBy: none
+		sourceColumn: TargetStoredProcedureName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ColumnKey
+		dataType: string
+		sourceProviderType: varchar(500)
+		lineageTag: 6257d23e-2d08-454e-b15b-5366e823ca67
+		sourceLineageTag: ColumnKey
+		summarizeBy: none
+		sourceColumn: ColumnKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfPrimaryKeyColumns
+		dataType: int64
+		formatString: 0
+		sourceProviderType: smallint
+		lineageTag: b00708ad-67b6-4c1b-a5fe-5a5abc5ed98c
+		sourceLineageTag: NumberOfPrimaryKeyColumns
+		summarizeBy: sum
+		sourceColumn: NumberOfPrimaryKeyColumns
+
+		annotation SummarizationSetBy = Automatic
+
+	column WaterfallColumn
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 7144dc4d-1b1d-4b59-a62d-c24fdc178618
+		sourceLineageTag: WaterfallColumn
+		summarizeBy: none
+		sourceColumn: WaterfallColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column TableColumns
+		dataType: string
+		sourceProviderType: varchar(1000)
+		lineageTag: 0ed18caf-4ba7-4899-b4dd-e277e4784b2d
+		sourceLineageTag: TableColumns
+		summarizeBy: none
+		sourceColumn: TableColumns
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExecutionOrder
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 76ab3e0b-7068-4ff3-b326-7a825e5cd172
+		sourceLineageTag: ExecutionOrder
+		summarizeBy: sum
+		sourceColumn: ExecutionOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	partition WhProcurement_Metadata = entity
+		mode: directLake
+		source
+			entityName: WhProcurement_Metadata
+			schemaName: meta
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,144 @@
+table RedFlag
+	lineageTag: 1eb9b725-d725-4863-aecc-72ea2b3fa671
+	sourceLineageTag: [tender].[RedFlag]
+
+	column RedFlagId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 878cd4a4-f329-4609-97ba-944e0b20381e
+		sourceLineageTag: RedFlagId
+		summarizeBy: count
+		sourceColumn: RedFlagId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: c9725cb9-d19d-42d4-abee-1a8b00575885
+		sourceLineageTag: ID
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Stage
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: b5287ee3-d9eb-48d0-819d-2d1747db8490
+		sourceLineageTag: Stage
+		summarizeBy: none
+		sourceColumn: Stage
+
+		annotation SummarizationSetBy = Automatic
+
+	column Associated_Scheme_s
+		dataType: string
+		sourceProviderType: varchar(150)
+		lineageTag: 2d817bea-a113-4486-a58d-d1e2531507df
+		sourceLineageTag: Associated_Scheme_s
+		summarizeBy: none
+		sourceColumn: Associated_Scheme_s
+
+		annotation SummarizationSetBy = Automatic
+
+	column Red_Flag
+		dataType: string
+		sourceProviderType: varchar(150)
+		lineageTag: cb93a442-250b-4e08-909c-6de34493eba7
+		sourceLineageTag: Red_Flag
+		summarizeBy: none
+		sourceColumn: Red_Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indicator_Description
+		dataType: string
+		sourceProviderType: varchar(300)
+		lineageTag: 51c8d0ba-e66e-4184-a2de-1ec5049f91d0
+		sourceLineageTag: Indicator_Description
+		summarizeBy: none
+		sourceColumn: Indicator_Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Calculation_method
+		dataType: string
+		sourceProviderType: varchar(800)
+		lineageTag: fd626cc9-4273-4e47-be53-be7d7013fd5e
+		sourceLineageTag: Calculation_method
+		summarizeBy: none
+		sourceColumn: Calculation_method
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rationale
+		dataType: string
+		sourceProviderType: varchar(1150)
+		lineageTag: e39f3f06-f33f-4bae-9376-d16b0b06d384
+		sourceLineageTag: Rationale
+		summarizeBy: none
+		sourceColumn: Rationale
+
+		annotation SummarizationSetBy = Automatic
+
+	column OCDS_fields
+		dataType: string
+		sourceProviderType: varchar(500)
+		lineageTag: d016a3fb-d885-427d-9b83-5b039f748d6d
+		sourceLineageTag: OCDS_fields
+		summarizeBy: none
+		sourceColumn: OCDS_fields
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aditional_data_fields
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 6cd08d52-c92c-46b0-a1f9-88688f20d2f3
+		sourceLineageTag: Aditional_data_fields
+		summarizeBy: none
+		sourceColumn: Aditional_data_fields
+
+		annotation SummarizationSetBy = Automatic
+
+	column OCDS_Extensions
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 02f8984e-c5fb-470e-bd95-930d1d4d79d7
+		sourceLineageTag: OCDS_Extensions
+		summarizeBy: none
+		sourceColumn: OCDS_Extensions
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description_of_fields
+		dataType: string
+		sourceProviderType: varchar(300)
+		lineageTag: a75e430d-4447-401f-be82-29bab27d3106
+		sourceLineageTag: Description_of_fields
+		summarizeBy: none
+		sourceColumn: Description_of_fields
+
+		annotation SummarizationSetBy = Automatic
+
+	column Source_Evidence
+		dataType: string
+		sourceProviderType: varchar(150)
+		lineageTag: 3b7de290-dab9-4c99-81b4-e35dfc0452cc
+		sourceLineageTag: Source_Evidence
+		summarizeBy: none
+		sourceColumn: Source_Evidence
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RedFlag = entity
+		mode: directLake
+		source
+			entityName: RedFlag
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

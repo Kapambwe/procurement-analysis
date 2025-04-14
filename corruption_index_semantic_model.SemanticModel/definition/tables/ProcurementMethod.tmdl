@@ -1,0 +1,44 @@
+table ProcurementMethod
+	lineageTag: 2b782a1f-fcf4-446d-b4ba-d61346887a1c
+	sourceLineageTag: [tender].[ProcurementMethod]
+
+	column ProcurementMethodId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a6a48580-7ecf-4ba5-bf2e-2e1759b4f197
+		sourceLineageTag: ProcurementMethodId
+		summarizeBy: none
+		sourceColumn: ProcurementMethodId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(200)
+		lineageTag: 31a13d1b-ee66-4617-8a23-d0875a96ef44
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 5c61527b-2c28-4258-85c7-458c1a8f3039
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ProcurementMethod = entity
+		mode: directLake
+		source
+			entityName: ProcurementMethod
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,5167 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1604,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "AwardContract",
+        "sourceLineageTag": "[tender].[AwardContract]",
+        "columns": [
+          {
+            "name": "AwardContractId",
+            "dataType": "int64",
+            "sourceColumn": "AwardContractId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "AwardContractId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ExternalAwardId",
+            "dataType": "int64",
+            "sourceColumn": "ExternalAwardId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ExternalAwardId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TenderStatusId",
+            "dataType": "int64",
+            "sourceColumn": "TenderStatusId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderStatusId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TenderId",
+            "dataType": "int64",
+            "sourceColumn": "TenderId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "AwardAmount",
+            "dataType": "double",
+            "sourceColumn": "AwardAmount",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "AwardAmount",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "CurrencyId",
+            "dataType": "int64",
+            "sourceColumn": "CurrencyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CurrencyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "BuyerId",
+            "dataType": "int64",
+            "sourceColumn": "BuyerId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "BuyerId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "AwardedId",
+            "dataType": "int64",
+            "sourceColumn": "AwardedId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "AwardedId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Quantity",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ProductId",
+            "dataType": "int64",
+            "sourceColumn": "ProductId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ProductId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "AwardDate",
+            "dataType": "dateTime",
+            "sourceColumn": "AwardDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "AwardDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ContractDateSigned",
+            "dataType": "dateTime",
+            "sourceColumn": "ContractDateSigned",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "ContractDateSigned",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ContractName",
+            "dataType": "string",
+            "sourceColumn": "ContractName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ContractName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ContractDescription",
+            "dataType": "string",
+            "sourceColumn": "ContractDescription",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ContractDescription",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ContractAmount",
+            "dataType": "double",
+            "sourceColumn": "ContractAmount",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "ContractAmount",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "ContractCurrencyId",
+            "dataType": "int64",
+            "sourceColumn": "ContractCurrencyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ContractCurrencyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ContractProductId",
+            "dataType": "int64",
+            "sourceColumn": "ContractProductId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ContractProductId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ContractStatusId",
+            "dataType": "int64",
+            "sourceColumn": "ContractStatusId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ContractStatusId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ContractorId",
+            "dataType": "int64",
+            "sourceColumn": "ContractorId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ContractorId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ExternalTenderId",
+            "dataType": "string",
+            "sourceColumn": "ExternalTenderId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ExternalTenderId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "AwardContract",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      },
+      {
+        "name": "AwardCriteria",
+        "sourceLineageTag": "[tender].[AwardCriteria]",
+        "columns": [
+          {
+            "name": "AwardCriteriaId",
+            "dataType": "int64",
+            "sourceColumn": "AwardCriteriaId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "AwardCriteriaId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "AwardCriteria",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "AwardCriteriaDetail",
+        "sourceLineageTag": "[tender].[AwardCriteriaDetail]",
+        "columns": [
+          {
+            "name": "AwardCriteriaDetailId",
+            "dataType": "int64",
+            "sourceColumn": "AwardCriteriaDetailId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "AwardCriteriaDetailId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "AwardCriteriaDetail",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "AwardTender",
+        "sourceLineageTag": "[tender].[AwardTender]",
+        "columns": [
+          {
+            "name": "AwardTenderId",
+            "dataType": "int64",
+            "sourceColumn": "AwardTenderId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "AwardTenderId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "AwardStatus",
+            "dataType": "string",
+            "sourceColumn": "AwardStatus",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "AwardStatus",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "AwardDate",
+            "dataType": "dateTime",
+            "sourceColumn": "AwardDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "AwardDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "AwardAmount",
+            "dataType": "double",
+            "sourceColumn": "AwardAmount",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "AwardAmount",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "AwardTender",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "BusinessType",
+        "sourceLineageTag": "[list].[BusinessType]",
+        "columns": [
+          {
+            "name": "BusinessTypeId",
+            "dataType": "int64",
+            "sourceColumn": "BusinessTypeId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "BusinessTypeId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Symbol",
+            "dataType": "string",
+            "sourceColumn": "Symbol",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Symbol",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "BusinessType",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "list"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "Company",
+        "sourceLineageTag": "[company].[Company]",
+        "columns": [
+          {
+            "name": "CompanyId",
+            "dataType": "int64",
+            "sourceColumn": "CompanyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CompanyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CountryId",
+            "dataType": "int64",
+            "sourceColumn": "CountryId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CountryId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "BusinessTypeId",
+            "dataType": "int64",
+            "sourceColumn": "BusinessTypeId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "BusinessTypeId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CompanyTypeId",
+            "dataType": "int64",
+            "sourceColumn": "CompanyTypeId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CompanyTypeId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Address",
+            "dataType": "string",
+            "sourceColumn": "Address",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Address",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Active",
+            "dataType": "boolean",
+            "sourceColumn": "Active",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit",
+            "sourceLineageTag": "Active",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "PhoneNumber",
+            "dataType": "string",
+            "sourceColumn": "PhoneNumber",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "PhoneNumber",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EmailAddress",
+            "dataType": "string",
+            "sourceColumn": "EmailAddress",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "EmailAddress",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "City",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "LegalName",
+            "dataType": "string",
+            "sourceColumn": "LegalName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "LegalName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "PostalCode",
+            "dataType": "string",
+            "sourceColumn": "PostalCode",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "PostalCode",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ParentCompanyId",
+            "dataType": "int64",
+            "sourceColumn": "ParentCompanyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ParentCompanyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Locality",
+            "dataType": "string",
+            "sourceColumn": "Locality",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Locality",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Region",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Company",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "company"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "CompanyRole",
+        "sourceLineageTag": "[tender].[CompanyRole]",
+        "columns": [
+          {
+            "name": "CompanyRoleId",
+            "dataType": "int64",
+            "sourceColumn": "CompanyRoleId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CompanyRoleId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Code",
+            "dataType": "string",
+            "sourceColumn": "Code",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Code",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "RelationShipName",
+            "dataType": "string",
+            "sourceColumn": "RelationShipName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "RelationShipName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "CompanyRole",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "CompanyType",
+        "sourceLineageTag": "[list].[CompanyType]",
+        "columns": [
+          {
+            "name": "CompanyTypeId",
+            "dataType": "int64",
+            "sourceColumn": "CompanyTypeId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CompanyTypeId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "IsActive",
+            "dataType": "boolean",
+            "sourceColumn": "IsActive",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit",
+            "sourceLineageTag": "IsActive",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "CompanyType",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "list"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "Continent",
+        "sourceLineageTag": "[list].[Continent]",
+        "columns": [
+          {
+            "name": "ContinentId",
+            "dataType": "int64",
+            "sourceColumn": "ContinentId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ContinentId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Continent",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "list"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "ContractingDocumentType",
+        "sourceLineageTag": "[tender].[ContractingDocumentType]",
+        "columns": [
+          {
+            "name": "ContractingDocumentTypeId",
+            "dataType": "int64",
+            "sourceColumn": "ContractingDocumentTypeId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ContractingDocumentTypeId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Section",
+            "dataType": "string",
+            "sourceColumn": "Section",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Section",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Category",
+            "dataType": "string",
+            "sourceColumn": "Category",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Category",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DocumentTypeId",
+            "dataType": "int64",
+            "sourceColumn": "DocumentTypeId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "DocumentTypeId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "ContractingDocumentType",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "ContractingStage",
+        "sourceLineageTag": "[tender].[ContractingStage]",
+        "columns": [
+          {
+            "name": "ContractingStageId",
+            "dataType": "int64",
+            "sourceColumn": "ContractingStageId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ContractingStageId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "ContractingStage",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "CorruptionRiskScore",
+        "sourceLineageTag": "[tender].[CorruptionRiskScore]",
+        "columns": [
+          {
+            "name": "CorruptionRiskScoreId",
+            "dataType": "int64",
+            "sourceColumn": "CorruptionRiskScoreId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CorruptionRiskScoreId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TenderRedFlagId",
+            "dataType": "int64",
+            "sourceColumn": "TenderRedFlagId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderRedFlagId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TrackDateTime",
+            "dataType": "dateTime",
+            "sourceColumn": "TrackDateTime",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "TrackDateTime",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Value",
+            "dataType": "int64",
+            "sourceColumn": "Value",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Value",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "CorruptionRiskScore",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      },
+      {
+        "name": "Country",
+        "sourceLineageTag": "[list].[Country]",
+        "columns": [
+          {
+            "name": "CountryId",
+            "dataType": "int64",
+            "sourceColumn": "CountryId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CountryId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ShortName",
+            "dataType": "string",
+            "sourceColumn": "ShortName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ShortName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SymbolCountry",
+            "dataType": "string",
+            "sourceColumn": "SymbolCountry",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "SymbolCountry",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Symbol",
+            "dataType": "string",
+            "sourceColumn": "Symbol",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Symbol",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CurrencySymbol",
+            "dataType": "string",
+            "sourceColumn": "CurrencySymbol",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "CurrencySymbol",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TimeZone",
+            "dataType": "string",
+            "sourceColumn": "TimeZone",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "TimeZone",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TimeToUtc",
+            "dataType": "int64",
+            "sourceColumn": "TimeToUtc",
+            "formatString": "0",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "TimeToUtc",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ContinentId",
+            "dataType": "int64",
+            "sourceColumn": "ContinentId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ContinentId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "RegionAreaId",
+            "dataType": "int64",
+            "sourceColumn": "RegionAreaId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "RegionAreaId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Country",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "list"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "CountryRegion",
+        "sourceLineageTag": "[list].[CountryRegion]",
+        "columns": [
+          {
+            "name": "CountryRegionId",
+            "dataType": "int64",
+            "sourceColumn": "CountryRegionId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CountryRegionId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CountryRegionTypeId",
+            "dataType": "int64",
+            "sourceColumn": "CountryRegionTypeId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CountryRegionTypeId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ParentCountryRegionId",
+            "dataType": "int64",
+            "sourceColumn": "ParentCountryRegionId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ParentCountryRegionId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CountryRegion",
+            "dataType": "string",
+            "sourceColumn": "CountryRegion",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "CountryRegion",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CountryId",
+            "dataType": "int64",
+            "sourceColumn": "CountryId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CountryId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "CountryRegion",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "list"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "CountryRegionType",
+        "sourceLineageTag": "[list].[CountryRegionType]",
+        "columns": [
+          {
+            "name": "CountryRegionTypeId",
+            "dataType": "int64",
+            "sourceColumn": "CountryRegionTypeId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CountryRegionTypeId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "CountryRegionType",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "list"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "Currency",
+        "sourceLineageTag": "[list].[Currency]",
+        "columns": [
+          {
+            "name": "CurrencyId",
+            "dataType": "int64",
+            "sourceColumn": "CurrencyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CurrencyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Currency",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "list"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "Document",
+        "sourceLineageTag": "[tender].[Document]",
+        "columns": [
+          {
+            "name": "DocumentId",
+            "dataType": "int64",
+            "sourceColumn": "DocumentId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "DocumentId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DateModified",
+            "dataType": "dateTime",
+            "sourceColumn": "DateModified",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "DateModified",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DatePublished",
+            "dataType": "dateTime",
+            "sourceColumn": "DatePublished",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "DatePublished",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Type",
+            "dataType": "string",
+            "sourceColumn": "Type",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Type",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ExternalId",
+            "dataType": "string",
+            "sourceColumn": "ExternalId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ExternalId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Language",
+            "dataType": "string",
+            "sourceColumn": "Language",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Language",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Url",
+            "dataType": "string",
+            "sourceColumn": "Url",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Url",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TenderId",
+            "dataType": "int64",
+            "sourceColumn": "TenderId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ExternalTenderId",
+            "dataType": "int64",
+            "sourceColumn": "ExternalTenderId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ExternalTenderId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Document",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      },
+      {
+        "name": "DocumentType",
+        "sourceLineageTag": "[tender].[DocumentType]",
+        "columns": [
+          {
+            "name": "DocumentTypeId",
+            "dataType": "int64",
+            "sourceColumn": "DocumentTypeId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "DocumentTypeId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Code",
+            "dataType": "string",
+            "sourceColumn": "Code",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Code",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DocumentType",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "EligibilityCriteria",
+        "sourceLineageTag": "[tender].[EligibilityCriteria]",
+        "columns": [
+          {
+            "name": "EligibilityCriteriaId",
+            "dataType": "int64",
+            "sourceColumn": "EligibilityCriteriaId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EligibilityCriteriaId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "EligibilityCriteria",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "EntityType",
+        "sourceLineageTag": "[list].[EntityType]",
+        "columns": [
+          {
+            "name": "EntityTypeId",
+            "dataType": "int64",
+            "sourceColumn": "EntityTypeId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EntityTypeId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "EntityType",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "list"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "Person",
+        "sourceLineageTag": "[person].[Person]",
+        "columns": [
+          {
+            "name": "PersonId",
+            "dataType": "int64",
+            "sourceColumn": "PersonId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "PersonId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "FirstName",
+            "dataType": "string",
+            "sourceColumn": "FirstName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "FirstName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "LastName",
+            "dataType": "string",
+            "sourceColumn": "LastName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "LastName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Gender",
+            "dataType": "string",
+            "sourceColumn": "Gender",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Gender",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "BirthDate",
+            "dataType": "dateTime",
+            "sourceColumn": "BirthDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "BirthDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Person",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "person"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "PersonCompany",
+        "sourceLineageTag": "[person].[PersonCompany]",
+        "columns": [
+          {
+            "name": "PersonCompanyId",
+            "dataType": "int64",
+            "sourceColumn": "PersonCompanyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "PersonCompanyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CompanyId",
+            "dataType": "int64",
+            "sourceColumn": "CompanyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CompanyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "PersonRoleId",
+            "dataType": "int64",
+            "sourceColumn": "PersonRoleId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "PersonRoleId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "PersonId",
+            "dataType": "int64",
+            "sourceColumn": "PersonId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "PersonId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "PersonCompany",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "person"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "PersonRole",
+        "sourceLineageTag": "[tender].[PersonRole]",
+        "columns": [
+          {
+            "name": "PersonRoleId",
+            "dataType": "int64",
+            "sourceColumn": "PersonRoleId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "PersonRoleId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "PersonRole",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "PipelineRun",
+        "sourceLineageTag": "[audit].[PipelineRun]",
+        "columns": [
+          {
+            "name": "PipelineRunId",
+            "dataType": "string",
+            "sourceColumn": "PipelineRunId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "PipelineRunId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "PipelineId",
+            "dataType": "string",
+            "sourceColumn": "PipelineId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "PipelineId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "StartTimeUTC",
+            "dataType": "dateTime",
+            "sourceColumn": "StartTimeUTC",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "StartTimeUTC",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EndTimeUTC",
+            "dataType": "dateTime",
+            "sourceColumn": "EndTimeUTC",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "EndTimeUTC",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "WorkspaceId",
+            "dataType": "string",
+            "sourceColumn": "WorkspaceId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "WorkspaceId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "PipelineTriggerId",
+            "dataType": "string",
+            "sourceColumn": "PipelineTriggerId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "PipelineTriggerId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ParentPipelineRunId",
+            "dataType": "string",
+            "sourceColumn": "ParentPipelineRunId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ParentPipelineRunId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "PipelineCompletedSuccessfully",
+            "dataType": "int64",
+            "sourceColumn": "PipelineCompletedSuccessfully",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "PipelineCompletedSuccessfully",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Process",
+            "dataType": "string",
+            "sourceColumn": "Process",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Process",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "PipelineRun",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "audit"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "ProcurementMethod",
+        "sourceLineageTag": "[tender].[ProcurementMethod]",
+        "columns": [
+          {
+            "name": "ProcurementMethodId",
+            "dataType": "int64",
+            "sourceColumn": "ProcurementMethodId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ProcurementMethodId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "ProcurementMethod",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "ProcurementMethodRationale",
+        "sourceLineageTag": "[tender].[ProcurementMethodRationale]",
+        "columns": [
+          {
+            "name": "ProcurementMethodRationaleId",
+            "dataType": "int64",
+            "sourceColumn": "ProcurementMethodRationaleId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ProcurementMethodRationaleId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "ProcurementMethodRationale",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "Product",
+        "sourceLineageTag": "[tender].[Product]",
+        "columns": [
+          {
+            "name": "ProductId",
+            "dataType": "int64",
+            "sourceColumn": "ProductId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ProductId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Classification",
+            "dataType": "string",
+            "sourceColumn": "Classification",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Classification",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Scheme",
+            "dataType": "string",
+            "sourceColumn": "Scheme",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Scheme",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ExternalId",
+            "dataType": "string",
+            "sourceColumn": "ExternalId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ExternalId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Uri",
+            "dataType": "string",
+            "sourceColumn": "Uri",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Uri",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Product",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "RedFlag",
+        "sourceLineageTag": "[tender].[RedFlag]",
+        "columns": [
+          {
+            "name": "RedFlagId",
+            "dataType": "int64",
+            "sourceColumn": "RedFlagId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "RedFlagId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ID",
+            "dataType": "string",
+            "sourceColumn": "ID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Stage",
+            "dataType": "string",
+            "sourceColumn": "Stage",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Stage",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Associated_Scheme_s",
+            "dataType": "string",
+            "sourceColumn": "Associated_Scheme_s",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Associated_Scheme_s",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Red_Flag",
+            "dataType": "string",
+            "sourceColumn": "Red_Flag",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Red_Flag",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Indicator_Description",
+            "dataType": "string",
+            "sourceColumn": "Indicator_Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Indicator_Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Calculation_method",
+            "dataType": "string",
+            "sourceColumn": "Calculation_method",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Calculation_method",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Rationale",
+            "dataType": "string",
+            "sourceColumn": "Rationale",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Rationale",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "OCDS_fields",
+            "dataType": "string",
+            "sourceColumn": "OCDS_fields",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "OCDS_fields",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Aditional_data_fields",
+            "dataType": "string",
+            "sourceColumn": "Aditional_data_fields",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Aditional_data_fields",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "OCDS_Extensions",
+            "dataType": "string",
+            "sourceColumn": "OCDS_Extensions",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "OCDS_Extensions",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description_of_fields",
+            "dataType": "string",
+            "sourceColumn": "Description_of_fields",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description_of_fields",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Source_Evidence",
+            "dataType": "string",
+            "sourceColumn": "Source_Evidence",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Source_Evidence",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "RedFlag",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      },
+      {
+        "name": "SubmissionMethod",
+        "sourceLineageTag": "[tender].[SubmissionMethod]",
+        "columns": [
+          {
+            "name": "SubmissionMethodId",
+            "dataType": "int64",
+            "sourceColumn": "SubmissionMethodId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "SubmissionMethodId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "SubmissionMethod",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "SubmissionMethodDetail",
+        "sourceLineageTag": "[tender].[SubmissionMethodDetail]",
+        "columns": [
+          {
+            "name": "SubmissionMethodDetailId",
+            "dataType": "int64",
+            "sourceColumn": "SubmissionMethodDetailId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "SubmissionMethodDetailId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "SubmissionMethodDetail",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "Tender",
+        "sourceLineageTag": "[tender].[Tender]",
+        "columns": [
+          {
+            "name": "TenderId",
+            "dataType": "int64",
+            "sourceColumn": "TenderId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Amount",
+            "dataType": "double",
+            "sourceColumn": "Amount",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "Amount",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EquiryPeriodId",
+            "dataType": "int64",
+            "sourceColumn": "EquiryPeriodId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EquiryPeriodId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "HasEquiry",
+            "dataType": "boolean",
+            "sourceColumn": "HasEquiry",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit",
+            "sourceLineageTag": "HasEquiry",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SubmittionMethodDetail",
+            "dataType": "string",
+            "sourceColumn": "SubmittionMethodDetail",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "SubmittionMethodDetail",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "NumberofTenderers",
+            "dataType": "int64",
+            "sourceColumn": "NumberofTenderers",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "NumberofTenderers",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TenderPeriodId",
+            "dataType": "int64",
+            "sourceColumn": "TenderPeriodId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderPeriodId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CurrencyId",
+            "dataType": "int64",
+            "sourceColumn": "CurrencyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CurrencyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ExternalId",
+            "dataType": "string",
+            "sourceColumn": "ExternalId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ExternalId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "AwardCriteriaId",
+            "dataType": "int64",
+            "sourceColumn": "AwardCriteriaId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "AwardCriteriaId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "AwardCriteriaDetailId",
+            "dataType": "int64",
+            "sourceColumn": "AwardCriteriaDetailId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "AwardCriteriaDetailId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EligibilityCriteriaId",
+            "dataType": "int64",
+            "sourceColumn": "EligibilityCriteriaId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EligibilityCriteriaId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ProcurementMethodId",
+            "dataType": "int64",
+            "sourceColumn": "ProcurementMethodId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ProcurementMethodId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ProcurementMethodRationaleId",
+            "dataType": "int64",
+            "sourceColumn": "ProcurementMethodRationaleId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ProcurementMethodRationaleId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SubmissionMethodId",
+            "dataType": "int64",
+            "sourceColumn": "SubmissionMethodId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "SubmissionMethodId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SubmittionMethodDetailId",
+            "dataType": "int64",
+            "sourceColumn": "SubmittionMethodDetailId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "SubmittionMethodDetailId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TenderStatusId",
+            "dataType": "int64",
+            "sourceColumn": "TenderStatusId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderStatusId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ProcuringCompanyId",
+            "dataType": "int64",
+            "sourceColumn": "ProcuringCompanyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ProcuringCompanyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "FundingCompanyId",
+            "dataType": "int64",
+            "sourceColumn": "FundingCompanyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "FundingCompanyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ProductId",
+            "dataType": "int64",
+            "sourceColumn": "ProductId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ProductId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "formatString": "0",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "Quantity",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "UnitId",
+            "dataType": "int64",
+            "sourceColumn": "UnitId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "UnitId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "AwardStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "AwardStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "AwardStartDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "AwardEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "AwardEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "AwardEndDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EnquiryStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "EnquiryStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "EnquiryStartDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EnquiryEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "EnquiryEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "EnquiryEndDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "InitiationType",
+            "dataType": "string",
+            "sourceColumn": "InitiationType",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "InitiationType",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Tender",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "TenderCompany",
+        "sourceLineageTag": "[tender].[TenderCompany]",
+        "columns": [
+          {
+            "name": "TenderCompanyId",
+            "dataType": "int64",
+            "sourceColumn": "TenderCompanyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderCompanyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CompanyRoleId",
+            "dataType": "int64",
+            "sourceColumn": "CompanyRoleId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CompanyRoleId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ClosingDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ClosingDate",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "ClosingDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TenderId",
+            "dataType": "int64",
+            "sourceColumn": "TenderId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CompanyId",
+            "dataType": "int64",
+            "sourceColumn": "CompanyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CompanyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "TenderCompany",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      },
+      {
+        "name": "TenderCorruptionIndex",
+        "sourceLineageTag": "[tender].[TenderCorruptionIndex]",
+        "columns": [
+          {
+            "name": "TenderCorruptionIndexId",
+            "dataType": "int64",
+            "sourceColumn": "TenderCorruptionIndexId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderCorruptionIndexId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TenderId",
+            "dataType": "int64",
+            "sourceColumn": "TenderId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CorruptionIndexScore",
+            "dataType": "decimal",
+            "sourceColumn": "CorruptionIndexScore",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "CorruptionIndexScore",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TrackDateTime",
+            "dataType": "dateTime",
+            "sourceColumn": "TrackDateTime",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "TrackDateTime",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "TenderCorruptionIndex",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      },
+      {
+        "name": "TenderItems",
+        "sourceLineageTag": "[tender].[TenderItems]",
+        "columns": [
+          {
+            "name": "TenderItemId",
+            "dataType": "string",
+            "sourceColumn": "TenderItemId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "TenderItemId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ExternalTenderId",
+            "dataType": "string",
+            "sourceColumn": "ExternalTenderId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ExternalTenderId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ProductId",
+            "dataType": "int64",
+            "sourceColumn": "ProductId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ProductId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Quantity",
+            "dataType": "double",
+            "sourceColumn": "Quantity",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "Quantity",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "UnitName",
+            "dataType": "string",
+            "sourceColumn": "UnitName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "UnitName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ExternalItemId",
+            "dataType": "string",
+            "sourceColumn": "ExternalItemId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ExternalItemId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "BuyerId",
+            "dataType": "int64",
+            "sourceColumn": "BuyerId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "BuyerId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TenderDate",
+            "dataType": "dateTime",
+            "sourceColumn": "TenderDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "TenderDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TenderAmount",
+            "dataType": "double",
+            "sourceColumn": "TenderAmount",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "TenderAmount",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "TenderId",
+            "dataType": "int64",
+            "sourceColumn": "TenderId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "TenderItems",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      },
+      {
+        "name": "TenderPeriod",
+        "sourceLineageTag": "[tender].[TenderPeriod]",
+        "columns": [
+          {
+            "name": "TenderPeriodId",
+            "dataType": "int64",
+            "sourceColumn": "TenderPeriodId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderPeriodId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "StartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "StartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "StartDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "EndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "EndDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TenderYear",
+            "dataType": "int64",
+            "sourceColumn": "TenderYear",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderYear",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "TenderPeriod",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "TenderRedFlag",
+        "sourceLineageTag": "[tender].[TenderRedFlag]",
+        "columns": [
+          {
+            "name": "TenderRedFlagId",
+            "dataType": "int64",
+            "sourceColumn": "TenderRedFlagId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderRedFlagId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "RedFlagId",
+            "dataType": "int64",
+            "sourceColumn": "RedFlagId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "RedFlagId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TenderId",
+            "dataType": "int64",
+            "sourceColumn": "TenderId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TrackDateTime",
+            "dataType": "dateTime",
+            "sourceColumn": "TrackDateTime",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "TrackDateTime",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Value",
+            "dataType": "string",
+            "sourceColumn": "Value",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Value",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ValueType",
+            "dataType": "string",
+            "sourceColumn": "ValueType",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ValueType",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "TenderRedFlag",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      },
+      {
+        "name": "TenderStatus",
+        "sourceLineageTag": "[tender].[TenderStatus]",
+        "columns": [
+          {
+            "name": "TenderStatusId",
+            "dataType": "int64",
+            "sourceColumn": "TenderStatusId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderStatusId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "TenderStatus",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "TenderType",
+        "sourceLineageTag": "[tender].[TenderType]",
+        "columns": [
+          {
+            "name": "TenderTypeId",
+            "dataType": "int64",
+            "sourceColumn": "TenderTypeId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderTypeId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "TenderType",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "Tenders",
+        "sourceLineageTag": "[tender].[Tenders]",
+        "columns": [
+          {
+            "name": "TenderId",
+            "dataType": "int64",
+            "sourceColumn": "TenderId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Amount",
+            "dataType": "int64",
+            "sourceColumn": "Amount",
+            "formatString": "0",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "Amount",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "BudgetAmount",
+            "dataType": "int64",
+            "sourceColumn": "BudgetAmount",
+            "formatString": "0",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "BudgetAmount",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ExternalId",
+            "dataType": "string",
+            "sourceColumn": "ExternalId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ExternalId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ReleaseData",
+            "dataType": "string",
+            "sourceColumn": "ReleaseData",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ReleaseData",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ReleaseOcid",
+            "dataType": "string",
+            "sourceColumn": "ReleaseOcid",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ReleaseOcid",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "InitiationType",
+            "dataType": "string",
+            "sourceColumn": "InitiationType",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "InitiationType",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "BudgetCurrencyId",
+            "dataType": "int64",
+            "sourceColumn": "BudgetCurrencyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "BudgetCurrencyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TenderCurrencyId",
+            "dataType": "int64",
+            "sourceColumn": "TenderCurrencyId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TenderCurrencyId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "BudgetDescription",
+            "dataType": "string",
+            "sourceColumn": "BudgetDescription",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "BudgetDescription",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Tenders",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      },
+      {
+        "name": "Units",
+        "sourceLineageTag": "[tender].[Units]",
+        "columns": [
+          {
+            "name": "UnitsId",
+            "dataType": "int64",
+            "sourceColumn": "UnitsId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "UnitsId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Units",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "tender"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "WhProcurement_Metadata",
+        "sourceLineageTag": "[meta].[WhProcurement_Metadata]",
+        "columns": [
+          {
+            "name": "TargetSchema",
+            "dataType": "string",
+            "sourceColumn": "TargetSchema",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "TargetSchema",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TargetTable",
+            "dataType": "string",
+            "sourceColumn": "TargetTable",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "TargetTable",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SourceSchema",
+            "dataType": "string",
+            "sourceColumn": "SourceSchema",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "SourceSchema",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SourceTable",
+            "dataType": "string",
+            "sourceColumn": "SourceTable",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "SourceTable",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "StagingSchema",
+            "dataType": "string",
+            "sourceColumn": "StagingSchema",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "StagingSchema",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "StagingTable",
+            "dataType": "string",
+            "sourceColumn": "StagingTable",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "StagingTable",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "StagingDatabase",
+            "dataType": "string",
+            "sourceColumn": "StagingDatabase",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "StagingDatabase",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "LoadType",
+            "dataType": "string",
+            "sourceColumn": "LoadType",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "LoadType",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "LoadIndicator",
+            "dataType": "string",
+            "sourceColumn": "LoadIndicator",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "LoadIndicator",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ETLStrategy",
+            "dataType": "string",
+            "sourceColumn": "ETLStrategy",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ETLStrategy",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SourceStoredProcedureName",
+            "dataType": "string",
+            "sourceColumn": "SourceStoredProcedureName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "SourceStoredProcedureName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TargetStoredProcedureName",
+            "dataType": "string",
+            "sourceColumn": "TargetStoredProcedureName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "TargetStoredProcedureName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ColumnKey",
+            "dataType": "string",
+            "sourceColumn": "ColumnKey",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ColumnKey",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "NumberOfPrimaryKeyColumns",
+            "dataType": "int64",
+            "sourceColumn": "NumberOfPrimaryKeyColumns",
+            "formatString": "0",
+            "sourceProviderType": "smallint",
+            "sourceLineageTag": "NumberOfPrimaryKeyColumns",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "WaterfallColumn",
+            "dataType": "string",
+            "sourceColumn": "WaterfallColumn",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "WaterfallColumn",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TableColumns",
+            "dataType": "string",
+            "sourceColumn": "TableColumns",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "TableColumns",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ExecutionOrder",
+            "dataType": "int64",
+            "sourceColumn": "ExecutionOrder",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ExecutionOrder",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "WhProcurement_Metadata",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "meta"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "09af5773e948b7e04d6b9f0671912367",
+        "fromTable": "TenderItems",
+        "fromColumn": "TenderId",
+        "toTable": "Tenders",
+        "toColumn": "TenderId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "0acfda628b234b9c74c41647180497bd",
+        "fromTable": "Tender",
+        "fromColumn": "SubmissionMethodId",
+        "toTable": "SubmissionMethod",
+        "toColumn": "SubmissionMethodId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "12661ab8ab93106c8ec651b400a35dc7",
+        "fromTable": "Tender",
+        "fromColumn": "AwardCriteriaDetailId",
+        "toTable": "AwardCriteriaDetail",
+        "toColumn": "AwardCriteriaDetailId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "1769f52e3fc9d5fc59c4319318055699",
+        "fromTable": "AwardContract",
+        "fromColumn": "ContractCurrencyId",
+        "toTable": "Currency",
+        "toColumn": "CurrencyId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "2beef3ebdd4a3dc0fdc00db63b71ac18",
+        "fromTable": "AwardContract",
+        "fromColumn": "BuyerId",
+        "toTable": "Company",
+        "toColumn": "CompanyId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "3ede4336cdf2743c04314bde67c0a0b4",
+        "fromTable": "TenderRedFlag",
+        "fromColumn": "TenderId",
+        "toTable": "Tender",
+        "toColumn": "TenderId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "3f3238ab8066e8c8ec9b0e379c70de64",
+        "fromTable": "AwardContract",
+        "fromColumn": "CurrencyId",
+        "toTable": "Currency",
+        "toColumn": "CurrencyId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "422ce60c968dd2a250bddf86e18d8746",
+        "fromTable": "Tender",
+        "fromColumn": "UnitId",
+        "toTable": "Units",
+        "toColumn": "UnitsId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "43b18c1c94c6e8017c3410f977bd190c",
+        "fromTable": "AwardContract",
+        "fromColumn": "ContractProductId",
+        "toTable": "Product",
+        "toColumn": "ProductId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "44b16ccee6ef1914be358c90c1c14c7b",
+        "fromTable": "PersonCompany",
+        "fromColumn": "PersonId",
+        "toTable": "Person",
+        "toColumn": "PersonId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "4697c6e80a43bdd1c760623303a7d2a2",
+        "fromTable": "Tender",
+        "fromColumn": "ProcuringCompanyId",
+        "toTable": "Company",
+        "toColumn": "CompanyId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "4a75ba748fca67004c52a3a14f5352fb",
+        "fromTable": "AwardContract",
+        "fromColumn": "AwardedId",
+        "toTable": "Company",
+        "toColumn": "CompanyId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "4c444a712bdc3e83ff52818b99d9babb",
+        "fromTable": "Company",
+        "fromColumn": "CountryId",
+        "toTable": "Country",
+        "toColumn": "CountryId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "4eb309a8bcf6e198e29901e3cc1a0d4c",
+        "fromTable": "Tender",
+        "fromColumn": "ProcurementMethodId",
+        "toTable": "ProcurementMethod",
+        "toColumn": "ProcurementMethodId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "51b643ba9803c421f217db4a73bf332b",
+        "fromTable": "Tender",
+        "fromColumn": "ProcurementMethodRationaleId",
+        "toTable": "ProcurementMethodRationale",
+        "toColumn": "ProcurementMethodRationaleId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "54d0ea65efa1a5879b5758bbd3673cff",
+        "fromTable": "Company",
+        "fromColumn": "ParentCompanyId",
+        "toTable": "Company",
+        "toColumn": "CompanyId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "5b5f038aa313ffeb5365bd107ddd9063",
+        "fromTable": "Document",
+        "fromColumn": "TenderId",
+        "toTable": "Tenders",
+        "toColumn": "TenderId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "6458649d7fc956393da56fd89e48a5ea",
+        "fromTable": "AwardContract",
+        "fromColumn": "TenderId",
+        "toTable": "Tenders",
+        "toColumn": "TenderId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "64c2e04f89b4a7f534250560ee145370",
+        "fromTable": "AwardContract",
+        "fromColumn": "ContractorId",
+        "toTable": "Company",
+        "toColumn": "CompanyId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "6563e245978b4db7ab3d0a7eb286e6bb",
+        "fromTable": "TenderCompany",
+        "fromColumn": "TenderId",
+        "toTable": "Tender",
+        "toColumn": "TenderId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "6b13fe98b8493a164fe06108f06fdec3",
+        "fromTable": "AwardContract",
+        "fromColumn": "ProductId",
+        "toTable": "Product",
+        "toColumn": "ProductId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "6f02e0acf58a202f3729a80c90885929",
+        "fromTable": "ContractingDocumentType",
+        "fromColumn": "DocumentTypeId",
+        "toTable": "DocumentType",
+        "toColumn": "DocumentTypeId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "80cf2f0d5fbdc78583633fce694045c6",
+        "fromTable": "AwardContract",
+        "fromColumn": "ContractStatusId",
+        "toTable": "TenderStatus",
+        "toColumn": "TenderStatusId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "84ee24e6c35636168ca42469a75aa140",
+        "fromTable": "PersonCompany",
+        "fromColumn": "PersonRoleId",
+        "toTable": "PersonRole",
+        "toColumn": "PersonRoleId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "9c91c854813e9cb660e7bcc99e0884d3",
+        "fromTable": "TenderCompany",
+        "fromColumn": "CompanyId",
+        "toTable": "Company",
+        "toColumn": "CompanyId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "a42fa6b06ccab6882d8b422f20b3ab0b",
+        "fromTable": "Company",
+        "fromColumn": "BusinessTypeId",
+        "toTable": "BusinessType",
+        "toColumn": "BusinessTypeId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "aa4a5a5384d3999e5d03476c08bfcf1d",
+        "fromTable": "Tender",
+        "fromColumn": "EligibilityCriteriaId",
+        "toTable": "EligibilityCriteria",
+        "toColumn": "EligibilityCriteriaId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "ae92c0169b25ed7f7a1f9368a5ab58f7",
+        "fromTable": "PersonCompany",
+        "fromColumn": "CompanyId",
+        "toTable": "Company",
+        "toColumn": "CompanyId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "aec564decfce1486cfcc75835b7e47d2",
+        "fromTable": "AwardContract",
+        "fromColumn": "TenderStatusId",
+        "toTable": "TenderStatus",
+        "toColumn": "TenderStatusId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "b0a62e6a43ac8d8c14ad5e8cca91475a",
+        "fromTable": "Tender",
+        "fromColumn": "TenderPeriodId",
+        "toTable": "TenderPeriod",
+        "toColumn": "TenderPeriodId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "b0ffaa8ccdc7ff90f9a4453980535631",
+        "fromTable": "Tender",
+        "fromColumn": "SubmittionMethodDetailId",
+        "toTable": "SubmissionMethodDetail",
+        "toColumn": "SubmissionMethodDetailId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "bb0df18e61f9edbee82ad18c67a26e3d",
+        "fromTable": "TenderItems",
+        "fromColumn": "ProductId",
+        "toTable": "Product",
+        "toColumn": "ProductId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "c0142cb66aa6fd4c3b2122e18b7cc368",
+        "fromTable": "CorruptionRiskScore",
+        "fromColumn": "TenderRedFlagId",
+        "toTable": "TenderRedFlag",
+        "toColumn": "TenderRedFlagId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "c855488de367d1a1ecc7518383c5ab7e",
+        "fromTable": "Tender",
+        "fromColumn": "ProductId",
+        "toTable": "Product",
+        "toColumn": "ProductId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "c8914fd971d4dc2f4cec2b98ebacedda",
+        "fromTable": "TenderRedFlag",
+        "fromColumn": "RedFlagId",
+        "toTable": "RedFlag",
+        "toColumn": "RedFlagId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "ccab12eb8b48d33f83c0d3ea61ada98a",
+        "fromTable": "TenderCompany",
+        "fromColumn": "CompanyRoleId",
+        "toTable": "CompanyRole",
+        "toColumn": "CompanyRoleId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "d3ce70833cab5006eef5536856c2b78c",
+        "fromTable": "Tender",
+        "fromColumn": "TenderStatusId",
+        "toTable": "TenderStatus",
+        "toColumn": "TenderStatusId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "dd6bfe18196ed928101793babacb9325",
+        "fromTable": "Tender",
+        "fromColumn": "FundingCompanyId",
+        "toTable": "Company",
+        "toColumn": "CompanyId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "f0efa9d2250fc841f2cfdcdac2d14023",
+        "fromTable": "Tender",
+        "fromColumn": "AwardCriteriaId",
+        "toTable": "AwardCriteria",
+        "toColumn": "AwardCriteriaId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "f18b7532fa212230b36b78d06aec8615",
+        "fromTable": "TenderCorruptionIndex",
+        "fromColumn": "TenderId",
+        "toTable": "Tender",
+        "toColumn": "TenderId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "f990c061a2bd67edca33993295741186",
+        "fromTable": "TenderItems",
+        "fromColumn": "BuyerId",
+        "toTable": "Company",
+        "toColumn": "CompanyId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "feff3b37786107063efc6d004b66ad39",
+        "fromTable": "Country",
+        "fromColumn": "ContinentId",
+        "toTable": "Continent",
+        "toColumn": "ContinentId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "ff29e533b84522a3ba597903ea9ae03f",
+        "fromTable": "Company",
+        "fromColumn": "CompanyTypeId",
+        "toTable": "CompanyType",
+        "toColumn": "CompanyTypeId",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}

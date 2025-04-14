@@ -1,0 +1,57 @@
+table PersonCompany
+	lineageTag: dabcc78f-a4ab-4929-ae85-ae180e97d7aa
+	sourceLineageTag: [person].[PersonCompany]
+
+	column PersonCompanyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8428fbf7-d3c0-4edf-9b2c-c3c5aadd7cea
+		sourceLineageTag: PersonCompanyId
+		summarizeBy: count
+		sourceColumn: PersonCompanyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f099990f-dc61-450a-9912-f79d6ed754c7
+		sourceLineageTag: CompanyId
+		summarizeBy: count
+		sourceColumn: CompanyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PersonRoleId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 622b4532-5e48-484b-bdec-caed9ce7af50
+		sourceLineageTag: PersonRoleId
+		summarizeBy: count
+		sourceColumn: PersonRoleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PersonId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2fb4fd43-cab0-451b-8494-766b9bf1bd5e
+		sourceLineageTag: PersonId
+		summarizeBy: count
+		sourceColumn: PersonId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PersonCompany = entity
+		mode: directLake
+		source
+			entityName: PersonCompany
+			schemaName: person
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

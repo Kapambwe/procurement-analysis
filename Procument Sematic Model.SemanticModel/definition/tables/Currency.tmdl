@@ -1,0 +1,34 @@
+table Currency
+	lineageTag: 85850289-fbf5-4329-8ec3-8d5f5af07827
+	sourceLineageTag: [list].[Currency]
+
+	column CurrencyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 78c4a9ab-ecb7-44d5-aa6a-79a01fe001e4
+		sourceLineageTag: CurrencyId
+		summarizeBy: count
+		sourceColumn: CurrencyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: fc5d5c56-0321-46a4-9de5-1a502d535962
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Currency = entity
+		mode: directLake
+		source
+			entityName: Currency
+			schemaName: list
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

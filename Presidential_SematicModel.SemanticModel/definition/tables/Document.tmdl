@@ -1,0 +1,128 @@
+table Document
+	lineageTag: aff19a89-6fc1-41c6-b8b1-ab67b8197c1d
+	sourceLineageTag: [tender].[Document]
+
+	column DocumentId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 76cdeb0c-f08f-46c6-aeb8-31844e0af42a
+		sourceLineageTag: DocumentId
+		summarizeBy: count
+		sourceColumn: DocumentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateModified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 8183d6ae-8ac3-4d89-a6a0-3c19b8e3aced
+		sourceLineageTag: DateModified
+		summarizeBy: none
+		sourceColumn: DateModified
+
+		annotation SummarizationSetBy = Automatic
+
+	column DatePublished
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b060a383-ae94-486f-a3e4-b445b7a16f0a
+		sourceLineageTag: DatePublished
+		summarizeBy: none
+		sourceColumn: DatePublished
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9815aeaa-1a72-4ab8-b553-36ce2e9b97e5
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: c6e6c52b-1610-4833-93bc-87e61fc75737
+		sourceLineageTag: Type
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExternalId
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 0a4f8b3b-ef16-42a3-8447-4dfabd99b351
+		sourceLineageTag: ExternalId
+		summarizeBy: none
+		sourceColumn: ExternalId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 599c8f80-063e-4327-9c2f-c07a42c7839b
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Language
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 2ed6591b-0151-4699-b82b-687aa80105c7
+		sourceLineageTag: Language
+		summarizeBy: none
+		sourceColumn: Language
+
+		annotation SummarizationSetBy = Automatic
+
+	column Url
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: d638487f-7c03-4176-aed3-714b8ec71dd8
+		sourceLineageTag: Url
+		summarizeBy: none
+		sourceColumn: Url
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 66e9602a-c73f-4083-9f88-a45f565d7905
+		sourceLineageTag: TenderId
+		summarizeBy: count
+		sourceColumn: TenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExternalTenderId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 31b21460-e300-4038-864d-c8f4745b455f
+		sourceLineageTag: ExternalTenderId
+		summarizeBy: count
+		sourceColumn: ExternalTenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Document = entity
+		mode: directLake
+		source
+			entityName: Document
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

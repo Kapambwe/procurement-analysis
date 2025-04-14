@@ -1,0 +1,57 @@
+table TenderCompany
+	lineageTag: b3824911-40df-4563-8493-9ae788c17456
+	sourceLineageTag: [tender].[TenderCompany]
+
+	column TenderCompanyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c796cfbc-0eb4-4dbd-adca-a77f96c0b38e
+		sourceLineageTag: TenderCompanyId
+		summarizeBy: count
+		sourceColumn: TenderCompanyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3dbeaeb3-a740-4593-b08b-67cbf0833284
+		sourceLineageTag: TenderId
+		summarizeBy: count
+		sourceColumn: TenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProcuringCompanyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 618e9c9d-951f-427d-a29d-665774ee291b
+		sourceLineageTag: ProcuringCompanyId
+		summarizeBy: count
+		sourceColumn: ProcuringCompanyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BidderCompanyId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 73923a47-de33-4d4c-82a4-5c5cfd0e0273
+		sourceLineageTag: BidderCompanyId
+		summarizeBy: count
+		sourceColumn: BidderCompanyId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TenderCompany = entity
+		mode: directLake
+		source
+			entityName: TenderCompany
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

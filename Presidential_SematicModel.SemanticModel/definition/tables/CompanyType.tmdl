@@ -1,0 +1,45 @@
+table CompanyType
+	lineageTag: df9e4995-1a19-4d5e-95e9-c4eb0cd7419a
+	sourceLineageTag: [list].[CompanyType]
+
+	column CompanyTypeId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 94f2b442-6250-495b-a9b0-4c094e149c5a
+		sourceLineageTag: CompanyTypeId
+		summarizeBy: none
+		sourceColumn: CompanyTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: a36d4933-cd4f-45d6-a83f-726b6c599e24
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: fc788463-bbd1-4636-9aef-cedb223434dc
+		sourceLineageTag: IsActive
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CompanyType = entity
+		mode: directLake
+		source
+			entityName: CompanyType
+			schemaName: list
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,65 @@
+table Person
+	lineageTag: 90f01d59-395f-4094-8504-1a027289b865
+	sourceLineageTag: [person].[Person]
+
+	column PersonId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 923e8b5b-86c3-446c-84f6-747c11158530
+		sourceLineageTag: PersonId
+		summarizeBy: count
+		sourceColumn: PersonId
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: b992ca9c-39ee-469e-873f-af07cfd91108
+		sourceLineageTag: FirstName
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: fae7d242-ca7b-4d4c-8c76-f073205df487
+		sourceLineageTag: LastName
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: bd57d139-cab7-4048-a537-9444912df275
+		sourceLineageTag: Gender
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column BirthDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 113c02e0-51cb-4e36-88ad-78f9bb7a5117
+		sourceLineageTag: BirthDate
+		summarizeBy: none
+		sourceColumn: BirthDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Person = entity
+		mode: directLake
+		source
+			entityName: Person
+			schemaName: person
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,117 @@
+table Country
+	lineageTag: 9b1fdb02-37a4-4d57-81fd-1c5d3dcb47d1
+	sourceLineageTag: [list].[Country]
+
+	column CountryId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5790ae60-5f7c-40b7-b79f-644a09f59f71
+		sourceLineageTag: CountryId
+		summarizeBy: count
+		sourceColumn: CountryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: e4bed6f8-8795-4955-b120-cdef5460c97b
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShortName
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 5ad2d4bb-85fd-4d84-9502-ac9bf56bfdb2
+		sourceLineageTag: ShortName
+		summarizeBy: none
+		sourceColumn: ShortName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SymbolCountry
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: d3fa464d-e821-406b-a501-a6fcc47ccd35
+		sourceLineageTag: SymbolCountry
+		summarizeBy: none
+		sourceColumn: SymbolCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column Symbol
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: a954b7bf-f1e6-48f5-a26d-a22207968fa3
+		sourceLineageTag: Symbol
+		summarizeBy: none
+		sourceColumn: Symbol
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencySymbol
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: dc49dc9f-d7f8-4d03-a96e-c7c076529455
+		sourceLineageTag: CurrencySymbol
+		summarizeBy: none
+		sourceColumn: CurrencySymbol
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeZone
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 071b259a-fbc9-42db-87ec-c424b7d670cd
+		sourceLineageTag: TimeZone
+		summarizeBy: none
+		sourceColumn: TimeZone
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeToUtc
+		dataType: int64
+		formatString: 0
+		sourceProviderType: decimal(18, 0)
+		lineageTag: 13529c98-b08f-4e8f-81a4-382818ae9afb
+		sourceLineageTag: TimeToUtc
+		summarizeBy: sum
+		sourceColumn: TimeToUtc
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContinentId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cf5daa9e-a69e-4349-9fc7-ee3b794a7a9d
+		sourceLineageTag: ContinentId
+		summarizeBy: count
+		sourceColumn: ContinentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RegionAreaId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 94b6a709-a1b3-4837-8c64-f27446e992e3
+		sourceLineageTag: RegionAreaId
+		summarizeBy: count
+		sourceColumn: RegionAreaId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Country = entity
+		mode: directLake
+		source
+			entityName: Country
+			schemaName: list
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,34 @@
+table Units
+	lineageTag: eb9ef08b-30fa-4624-a04b-757ad5a7a4ef
+	sourceLineageTag: [tender].[Units]
+
+	column UnitsId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2b89fd08-2f85-4546-8a23-b234016d00c1
+		sourceLineageTag: UnitsId
+		summarizeBy: count
+		sourceColumn: UnitsId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 6957a962-8876-4493-a67a-1ea27885bf95
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Units = entity
+		mode: directLake
+		source
+			entityName: Units
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

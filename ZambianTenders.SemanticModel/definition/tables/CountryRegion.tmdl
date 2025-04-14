@@ -1,0 +1,77 @@
+table CountryRegion
+	lineageTag: 91db25d4-e526-4c0d-87e7-58e1efbaf041
+	sourceLineageTag: [list].[CountryRegion]
+
+	column CountryRegionId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: da79455d-8751-487f-bbd9-bd914c32a10e
+		sourceLineageTag: CountryRegionId
+		summarizeBy: count
+		sourceColumn: CountryRegionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: a77505c3-9f10-47d8-a41d-5b6edc4258d7
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryRegionTypeId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ccb4b24b-d84e-4b74-b5f3-e83c4456c705
+		sourceLineageTag: CountryRegionTypeId
+		summarizeBy: count
+		sourceColumn: CountryRegionTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentCountryRegionId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dffbffc7-dbb0-410b-afb0-e48dc644828a
+		sourceLineageTag: ParentCountryRegionId
+		summarizeBy: count
+		sourceColumn: ParentCountryRegionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryRegion
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 322bfb3d-fcf7-48eb-aadd-7b738cab4cc3
+		sourceLineageTag: CountryRegion
+		summarizeBy: none
+		sourceColumn: CountryRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f0db51f4-381c-466d-a7ac-e4248aa5fa6a
+		sourceLineageTag: CountryId
+		summarizeBy: count
+		sourceColumn: CountryId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CountryRegion = entity
+		mode: directLake
+		source
+			entityName: CountryRegion
+			schemaName: list
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

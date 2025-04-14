@@ -1,0 +1,77 @@
+table TenderRedFlag
+	lineageTag: 81fedb66-a2dd-4670-ba55-ea302c4081b0
+	sourceLineageTag: [tender].[TenderRedFlag]
+
+	column TenderRedFlagId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6c7ae829-7b67-4da1-9b86-f6c99f78b395
+		sourceLineageTag: TenderRedFlagId
+		summarizeBy: count
+		sourceColumn: TenderRedFlagId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RedFlagId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 36515239-ea12-4749-970f-fc613028b818
+		sourceLineageTag: RedFlagId
+		summarizeBy: count
+		sourceColumn: RedFlagId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenderId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 11d513b4-0df8-4c4e-a4d6-2692ea22c76c
+		sourceLineageTag: TenderId
+		summarizeBy: count
+		sourceColumn: TenderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TrackDateTime
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 3d13e8a5-2917-47a2-bf25-ac9b6d3dc1ee
+		sourceLineageTag: TrackDateTime
+		summarizeBy: none
+		sourceColumn: TrackDateTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value
+		dataType: string
+		sourceProviderType: varchar(-1)
+		lineageTag: 71fcc0bf-d7c6-4374-8e15-eb61b23c4410
+		sourceLineageTag: Value
+		summarizeBy: none
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+	column ValueType
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: f2975634-4120-4b05-86fa-c5a554c92731
+		sourceLineageTag: ValueType
+		summarizeBy: none
+		sourceColumn: ValueType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TenderRedFlag = entity
+		mode: directLake
+		source
+			entityName: TenderRedFlag
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,68 @@
+relationship 9f4444bd-1dc1-8c39-3562-45df0efb0d09
+	fromColumn: Tender.AwardCriteriaId
+	toColumn: AwardCriteria.AwardCriteriaId
+
+relationship fae1ef02-b1ed-7dd4-d7b6-91feaf4a0022
+	relyOnReferentialIntegrity
+	fromColumn: Tender.ProcuringCompanyId
+	toColumn: Company.CompanyId
+
+relationship a7ecac48-4c13-51ab-1784-c1304a2fd217
+	relyOnReferentialIntegrity
+	fromColumn: Tender.AwardCriteriaDetailId
+	toColumn: AwardCriteriaDetail.AwardCriteriaDetailId
+
+relationship 66f1266a-14f9-2573-fe66-558e93514daf
+	relyOnReferentialIntegrity
+	fromColumn: Tender.CurrencyId
+	toColumn: Currency.CurrencyId
+
+relationship fd0d7543-a7db-31ff-7e7b-53e3545ca43e
+	relyOnReferentialIntegrity
+	fromColumn: Tender.TenderStatusId
+	toColumn: TenderStatus.TenderStatusId
+
+relationship ca6728f5-f59f-8f43-48b0-4017e0d6fcef
+	relyOnReferentialIntegrity
+	fromColumn: Tender.TenderPeriodId
+	toColumn: TenderPeriod.TenderPeriodId
+
+relationship a3ae2dd8-db39-5efc-d8ac-b39b4a06756d
+	relyOnReferentialIntegrity
+	fromColumn: Tender.EligibilityCriteriaId
+	toColumn: EligibilityCriteria.EligibilityCriteriaId
+
+relationship 169ba849-1ed1-a6ad-4008-a277983cde9e
+	relyOnReferentialIntegrity
+	fromColumn: Tender.ProductId
+	toColumn: Product.ProductId
+
+relationship a3febfc2-b59e-1ca4-44b9-794675f8a29c
+	relyOnReferentialIntegrity
+	fromColumn: Tender.SubmissionMethodId
+	toColumn: SubmissionMethod.SubmissionMethodId
+
+relationship 6c1e088d-ae7d-2343-16d2-971a6c225828
+	relyOnReferentialIntegrity
+	fromColumn: Tender.ProcurementMethodId
+	toColumn: ProcurementMethod.ProcurementMethodId
+
+relationship de2a781d-4c88-2ddf-90e2-e3aa057d9f74
+	fromColumn: Tender.ProcurementMethodRationaleId
+	toColumn: ProcurementMethodRationale.ProcurementMethodRationaleId
+
+relationship eb85a3d5-694f-ee98-f516-9fcc25202b0a
+	relyOnReferentialIntegrity
+	fromColumn: Company.CountryId
+	toColumn: Country.CountryId
+
+relationship 37d3ace4-3fb5-c1a2-f048-ef452a461ec4
+	relyOnReferentialIntegrity
+	fromColumn: Company.CompanyTypeId
+	toColumn: CompanyType.CompanyTypeId
+
+relationship de73fa36-cde4-184e-a4ca-4510e5a67ac3
+	relyOnReferentialIntegrity
+	fromColumn: Company.BusinessTypeId
+	toColumn: BusinessType.BusinessTypeId
+

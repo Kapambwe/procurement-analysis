@@ -1,0 +1,106 @@
+table PipelineRun
+	lineageTag: 0e6d2ac1-c5fb-442e-857d-a9d23abc18ed
+	sourceLineageTag: [audit].[PipelineRun]
+
+	column PipelineRunId
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 9c8e071f-7dab-49e0-8b4a-f53cae6bb3b8
+		sourceLineageTag: PipelineRunId
+		summarizeBy: none
+		sourceColumn: PipelineRunId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PipelineId
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 70a2c4bf-4b28-498b-9553-a7a321212e8e
+		sourceLineageTag: PipelineId
+		summarizeBy: none
+		sourceColumn: PipelineId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartTimeUTC
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 0c55acaa-25a1-4d35-8ffd-e2030f0b4dd0
+		sourceLineageTag: StartTimeUTC
+		summarizeBy: none
+		sourceColumn: StartTimeUTC
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndTimeUTC
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 3ac5937d-8c1c-451e-aacb-8d3401e5d068
+		sourceLineageTag: EndTimeUTC
+		summarizeBy: none
+		sourceColumn: EndTimeUTC
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkspaceId
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 33df32e1-6757-44cd-9fb6-95523758ee54
+		sourceLineageTag: WorkspaceId
+		summarizeBy: none
+		sourceColumn: WorkspaceId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PipelineTriggerId
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 916124b8-8ae4-464d-9343-36c5ba03651a
+		sourceLineageTag: PipelineTriggerId
+		summarizeBy: none
+		sourceColumn: PipelineTriggerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentPipelineRunId
+		dataType: string
+		sourceProviderType: varchar(100)
+		lineageTag: 31fd9523-0e7b-4fa6-bbea-06f1a1982cca
+		sourceLineageTag: ParentPipelineRunId
+		summarizeBy: none
+		sourceColumn: ParentPipelineRunId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PipelineCompletedSuccessfully
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3fb835d4-f548-41e2-9e71-7ad23280de5b
+		sourceLineageTag: PipelineCompletedSuccessfully
+		summarizeBy: sum
+		sourceColumn: PipelineCompletedSuccessfully
+
+		annotation SummarizationSetBy = Automatic
+
+	column Process
+		dataType: string
+		sourceProviderType: varchar(500)
+		lineageTag: cf7a861f-4cb6-4eb8-9c4a-8cd62318372b
+		sourceLineageTag: Process
+		summarizeBy: none
+		sourceColumn: Process
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PipelineRun = entity
+		mode: directLake
+		source
+			entityName: PipelineRun
+			schemaName: audit
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

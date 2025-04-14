@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "ZambianTenders"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ae55c1d9-7ec7-87c6-4e17-ae1a7a45cb73"
+  }
+}

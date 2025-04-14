@@ -1,0 +1,34 @@
+table ContractingStage
+	lineageTag: 4e0f52aa-70d7-4459-8119-489d81af9118
+	sourceLineageTag: [tender].[ContractingStage]
+
+	column ContractingStageId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3c7b8da7-763a-4f08-b9e5-0080d1b7e85f
+		sourceLineageTag: ContractingStageId
+		summarizeBy: count
+		sourceColumn: ContractingStageId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(50)
+		lineageTag: 76636132-0b32-496f-a2f7-2ccba345ca88
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ContractingStage = entity
+		mode: directLake
+		source
+			entityName: ContractingStage
+			schemaName: tender
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
