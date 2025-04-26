@@ -2,7 +2,7 @@
   "version": "4.0",
   "datasetReference": {
     "byPath": {
-      "path": "../Presidential_SematicModel.SemanticModel"
+      "path": "../zppa-ocid-data-semantic-model/Presidential_SematicModel.SemanticModel"
     }
   }
 }

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "zppa-ocid-data-pipeline"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "52567d06-feab-bef0-4fcb-7650f04799ba"
+  }
+}

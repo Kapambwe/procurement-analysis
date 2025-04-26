@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDashboard",
+    "displayName": "real-time-price-disparities-report",
+    "description": "real-time-price-disparities-report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "513051df-9dc7-8c57-4866-f6cde7d11655"
+  }
+}

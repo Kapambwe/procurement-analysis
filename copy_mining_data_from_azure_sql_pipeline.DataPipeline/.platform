@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "copy_mining_data_from_azure_sql_pipeline"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "177795b3-f10a-a154-44c2-ffae0c81a6f0"
+  }
+}

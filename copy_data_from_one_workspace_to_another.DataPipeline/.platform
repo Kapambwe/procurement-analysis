@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "copy_data_from_one_workspace_to_another"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "faf899b3-f911-870e-474d-89b6f8b596a9"
+  }
+}

@@ -1,0 +1,424 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "Get_Metadata",
+        "type": "Lookup",
+        "dependsOn": [
+          {
+            "activity": "Get_PipelineMetadata",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "source": {
+            "type": "DataWarehouseSource",
+            "queryTimeout": "02:00:00",
+            "partitionOption": "None"
+          },
+          "firstRowOnly": false,
+          "datasetSettings": {
+            "annotations": [],
+            "linkedService": {
+              "name": "Wh_Procurement",
+              "properties": {
+                "annotations": [],
+                "type": "DataWarehouse",
+                "typeProperties": {
+                  "endpoint": "ngqjlhh2sjkuxhvxkcda5esliy-ornpozi6xzlezhbnlr5r6anvtq.datawarehouse.fabric.microsoft.com",
+                  "artifactId": "c4d0385e-9f20-4beb-8c55-1c42475567d9",
+                  "workspaceId": "65f75a74-be1e-4c56-9c2d-5c7b1f01b59c"
+                }
+              }
+            },
+            "type": "DataWarehouseTable",
+            "schema": [],
+            "typeProperties": {
+              "schema": "meta",
+              "table": "WhProcurement_Metadata"
+            }
+          }
+        }
+      },
+      {
+        "name": "Get_PipelineMetadata",
+        "type": "SqlServerStoredProcedure",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "storedProcedureName": "[audit].[p_PipelineRunUpsert]",
+          "storedProcedureParameters": {
+            "EndTimeUTC": {
+              "value": {
+                "value": "@utcNow()",
+                "type": "Expression"
+              },
+              "type": "DateTime"
+            },
+            "ParentPipelineRunId": {
+              "value": {
+                "value": "@pipeline()?.TriggeredByPipeline",
+                "type": "Expression"
+              },
+              "type": "String"
+            },
+            "PipelineCompletedSuccessfully": {
+              "value": null,
+              "type": "Int32"
+            },
+            "PipelineId": {
+              "value": {
+                "value": "@pipeline().Pipeline",
+                "type": "Expression"
+              },
+              "type": "String"
+            },
+            "PipelineRunId": {
+              "value": {
+                "value": "@pipeline().RunId",
+                "type": "Expression"
+              },
+              "type": "String"
+            },
+            "PipelineTriggerId": {
+              "value": {
+                "value": "@pipeline().TriggerId",
+                "type": "Expression"
+              },
+              "type": "String"
+            },
+            "Process": {
+              "value": "Copy Data From Azure Db",
+              "type": "String"
+            },
+            "StartTimeUTC": {
+              "value": {
+                "value": "@pipeline().TriggerTime",
+                "type": "Expression"
+              },
+              "type": "DateTime"
+            },
+            "WorkspaceId": {
+              "value": {
+                "value": "@pipeline().DataFactory",
+                "type": "Expression"
+              },
+              "type": "String"
+            }
+          }
+        },
+        "linkedService": {
+          "name": "Wh_Procurement",
+          "objectId": "c4d0385e-9f20-4beb-8c55-1c42475567d9",
+          "properties": {
+            "annotations": [],
+            "type": "DataWarehouse",
+            "typeProperties": {
+              "endpoint": "ngqjlhh2sjkuxhvxkcda5esliy-ornpozi6xzlezhbnlr5r6anvtq.datawarehouse.fabric.microsoft.com",
+              "artifactId": "c4d0385e-9f20-4beb-8c55-1c42475567d9",
+              "workspaceId": "65f75a74-be1e-4c56-9c2d-5c7b1f01b59c"
+            }
+          }
+        }
+      },
+      {
+        "name": "ForEach ProcessSourceData",
+        "type": "ForEach",
+        "dependsOn": [
+          {
+            "activity": "Get_Metadata",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "items": {
+            "value": "@activity('Get_Metadata').output.value",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "name": "Check Conditions",
+              "type": "IfCondition",
+              "dependsOn": [],
+              "typeProperties": {
+                "expression": {
+                  "value": "@equals(item().SourceStoredProcedureName,null)",
+                  "type": "Expression"
+                },
+                "ifFalseActivities": [
+                  {
+                    "name": "CopyDataUsingSP",
+                    "type": "Copy",
+                    "dependsOn": [],
+                    "policy": {
+                      "timeout": "0.12:00:00",
+                      "retry": 0,
+                      "retryIntervalInSeconds": 30,
+                      "secureOutput": false,
+                      "secureInput": false
+                    },
+                    "typeProperties": {
+                      "source": {
+                        "type": "AzureSqlSource",
+                        "sqlReaderStoredProcedureName": {
+                          "value": "@item().SourceStoredProcedureName",
+                          "type": "Expression"
+                        },
+                        "queryTimeout": "02:00:00",
+                        "partitionOption": "None",
+                        "datasetSettings": {
+                          "annotations": [],
+                          "type": "AzureSqlTable",
+                          "schema": [],
+                          "typeProperties": {
+                            "database": "neosoft_FinancialMarkets"
+                          },
+                          "externalReferences": {
+                            "connection": "3258a540-9c51-458f-9f8d-5b017d3625c9"
+                          }
+                        }
+                      },
+                      "sink": {
+                        "type": "DataWarehouseSink",
+                        "allowCopyCommand": true,
+                        "copyCommandSettings": {},
+                        "datasetSettings": {
+                          "annotations": [],
+                          "linkedService": {
+                            "name": "Wh_Staging_Procurement",
+                            "properties": {
+                              "annotations": [],
+                              "type": "DataWarehouse",
+                              "typeProperties": {
+                                "endpoint": "ngqjlhh2sjkuxhvxkcda5esliy-ornpozi6xzlezhbnlr5r6anvtq.datawarehouse.fabric.microsoft.com",
+                                "artifactId": "702fb7e2-f39c-4e80-9ebe-d2a8c6337000",
+                                "workspaceId": "65f75a74-be1e-4c56-9c2d-5c7b1f01b59c"
+                              }
+                            }
+                          },
+                          "type": "DataWarehouseTable",
+                          "schema": [],
+                          "typeProperties": {
+                            "schema": {
+                              "value": "@item().TargetSchema",
+                              "type": "Expression"
+                            },
+                            "table": {
+                              "value": "@item().TargetTable",
+                              "type": "Expression"
+                            }
+                          }
+                        }
+                      },
+                      "enableStaging": true,
+                      "translator": {
+                        "type": "TabularTranslator",
+                        "typeConversion": true,
+                        "typeConversionSettings": {
+                          "allowDataTruncation": true,
+                          "treatBooleanAsNumber": false
+                        }
+                      }
+                    }
+                  }
+                ],
+                "ifTrueActivities": [
+                  {
+                    "name": "Copy data Using Table",
+                    "type": "Copy",
+                    "dependsOn": [],
+                    "policy": {
+                      "timeout": "0.12:00:00",
+                      "retry": 0,
+                      "retryIntervalInSeconds": 30,
+                      "secureOutput": false,
+                      "secureInput": false
+                    },
+                    "typeProperties": {
+                      "source": {
+                        "type": "AzureSqlSource",
+                        "queryTimeout": "02:00:00",
+                        "partitionOption": "None",
+                        "datasetSettings": {
+                          "annotations": [],
+                          "type": "AzureSqlTable",
+                          "schema": [],
+                          "typeProperties": {
+                            "schema": {
+                              "value": "@item().SourceSchema",
+                              "type": "Expression"
+                            },
+                            "table": {
+                              "value": "@item().SourceTable",
+                              "type": "Expression"
+                            },
+                            "database": "neosoft_FinancialMarkets"
+                          },
+                          "externalReferences": {
+                            "connection": "3258a540-9c51-458f-9f8d-5b017d3625c9"
+                          }
+                        }
+                      },
+                      "sink": {
+                        "type": "DataWarehouseSink",
+                        "allowCopyCommand": true,
+                        "copyCommandSettings": {},
+                        "datasetSettings": {
+                          "annotations": [],
+                          "linkedService": {
+                            "name": "Wh_Staging_Procurement",
+                            "properties": {
+                              "annotations": [],
+                              "type": "DataWarehouse",
+                              "typeProperties": {
+                                "endpoint": "ngqjlhh2sjkuxhvxkcda5esliy-ornpozi6xzlezhbnlr5r6anvtq.datawarehouse.fabric.microsoft.com",
+                                "artifactId": "702fb7e2-f39c-4e80-9ebe-d2a8c6337000",
+                                "workspaceId": "65f75a74-be1e-4c56-9c2d-5c7b1f01b59c"
+                              }
+                            }
+                          },
+                          "type": "DataWarehouseTable",
+                          "schema": [],
+                          "typeProperties": {
+                            "schema": {
+                              "value": "@item().TargetSchema",
+                              "type": "Expression"
+                            },
+                            "table": {
+                              "value": "@item().TargetTable",
+                              "type": "Expression"
+                            }
+                          }
+                        }
+                      },
+                      "enableStaging": true,
+                      "translator": {
+                        "type": "TabularTranslator",
+                        "typeConversion": true,
+                        "typeConversionSettings": {
+                          "allowDataTruncation": true,
+                          "treatBooleanAsNumber": false
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Get_PipelineMetadata_End",
+        "type": "SqlServerStoredProcedure",
+        "dependsOn": [
+          {
+            "activity": "ForEach ProcessSourceData",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "storedProcedureName": "[audit].[p_PipelineRunUpsert]",
+          "storedProcedureParameters": {
+            "EndTimeUTC": {
+              "value": {
+                "value": "@utcNow()",
+                "type": "Expression"
+              },
+              "type": "DateTime"
+            },
+            "ParentPipelineRunId": {
+              "value": {
+                "value": "@pipeline()?.TriggeredByPipeline",
+                "type": "Expression"
+              },
+              "type": "String"
+            },
+            "PipelineCompletedSuccessfully": {
+              "value": null,
+              "type": "Int32"
+            },
+            "PipelineId": {
+              "value": {
+                "value": "@pipeline().Pipeline",
+                "type": "Expression"
+              },
+              "type": "String"
+            },
+            "PipelineRunId": {
+              "value": {
+                "value": "@pipeline().RunId",
+                "type": "Expression"
+              },
+              "type": "String"
+            },
+            "PipelineTriggerId": {
+              "value": {
+                "value": "@pipeline().TriggerId",
+                "type": "Expression"
+              },
+              "type": "String"
+            },
+            "Process": {
+              "value": "Copy data from sql azure",
+              "type": "String"
+            },
+            "StartTimeUTC": {
+              "value": {
+                "value": "@pipeline().TriggerTime",
+                "type": "Expression"
+              },
+              "type": "DateTime"
+            },
+            "WorkspaceId": {
+              "value": {
+                "value": "@pipeline().DataFactory",
+                "type": "Expression"
+              },
+              "type": "String"
+            }
+          }
+        },
+        "linkedService": {
+          "name": "Wh_Procurement",
+          "objectId": "c4d0385e-9f20-4beb-8c55-1c42475567d9",
+          "properties": {
+            "annotations": [],
+            "type": "DataWarehouse",
+            "typeProperties": {
+              "endpoint": "ngqjlhh2sjkuxhvxkcda5esliy-ornpozi6xzlezhbnlr5r6anvtq.datawarehouse.fabric.microsoft.com",
+              "artifactId": "c4d0385e-9f20-4beb-8c55-1c42475567d9",
+              "workspaceId": "65f75a74-be1e-4c56-9c2d-5c7b1f01b59c"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

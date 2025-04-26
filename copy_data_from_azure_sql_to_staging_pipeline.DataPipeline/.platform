@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "copy_data_from_azure_sql_to_staging_pipeline"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fb3277c1-9fed-b3d2-4118-cadf185cf3a5"
+  }
+}

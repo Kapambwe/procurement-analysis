@@ -1,0 +1,122 @@
+[
+  {
+    "name": "versionedreleasetable",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/versionedreleasetable",
+        "itemId": "de53d1c4-954c-4ad0-87de-c54f0da25bcc",
+        "workspaceId": "cc8a7d85-63f6-45fe-bb86-ab4c953a7076"
+      }
+    }
+  },
+  {
+    "name": "tendererversionedreleasestable",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/tendererversionedreleasestable",
+        "itemId": "de53d1c4-954c-4ad0-87de-c54f0da25bcc",
+        "workspaceId": "cc8a7d85-63f6-45fe-bb86-ab4c953a7076"
+      }
+    }
+  },
+  {
+    "name": "tenderercompiledreleasetable",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/tenderercompiledreleasetable",
+        "itemId": "de53d1c4-954c-4ad0-87de-c54f0da25bcc",
+        "workspaceId": "cc8a7d85-63f6-45fe-bb86-ab4c953a7076"
+      }
+    }
+  },
+  {
+    "name": "releasetable",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/releasetable",
+        "itemId": "de53d1c4-954c-4ad0-87de-c54f0da25bcc",
+        "workspaceId": "cc8a7d85-63f6-45fe-bb86-ab4c953a7076"
+      }
+    }
+  },
+  {
+    "name": "procurement",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/procurement",
+        "itemId": "de53d1c4-954c-4ad0-87de-c54f0da25bcc",
+        "workspaceId": "cc8a7d85-63f6-45fe-bb86-ab4c953a7076"
+      }
+    }
+  },
+  {
+    "name": "itemscompiledreleasetable",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/itemscompiledreleasetable",
+        "itemId": "de53d1c4-954c-4ad0-87de-c54f0da25bcc",
+        "workspaceId": "cc8a7d85-63f6-45fe-bb86-ab4c953a7076"
+      }
+    }
+  },
+  {
+    "name": "documentscompiledreleasetable",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/documentscompiledreleasetable",
+        "itemId": "de53d1c4-954c-4ad0-87de-c54f0da25bcc",
+        "workspaceId": "cc8a7d85-63f6-45fe-bb86-ab4c953a7076"
+      }
+    }
+  },
+  {
+    "name": "compiledreleasetable",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/compiledreleasetable",
+        "itemId": "de53d1c4-954c-4ad0-87de-c54f0da25bcc",
+        "workspaceId": "cc8a7d85-63f6-45fe-bb86-ab4c953a7076"
+      }
+    }
+  },
+  {
+    "name": "budgetbuyertendercompiledreleasetable",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/budgetbuyertendercompiledreleasetable",
+        "itemId": "de53d1c4-954c-4ad0-87de-c54f0da25bcc",
+        "workspaceId": "cc8a7d85-63f6-45fe-bb86-ab4c953a7076"
+      }
+    }
+  },
+  {
+    "name": "awardcompiledreleasetable",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/awardcompiledreleasetable",
+        "itemId": "de53d1c4-954c-4ad0-87de-c54f0da25bcc",
+        "workspaceId": "cc8a7d85-63f6-45fe-bb86-ab4c953a7076"
+      }
+    }
+  }
+]

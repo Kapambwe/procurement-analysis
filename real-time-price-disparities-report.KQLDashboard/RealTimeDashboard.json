@@ -1,0 +1,35 @@
+{
+  "autoRefresh": {
+    "enabled": false
+  },
+  "baseQueries": [],
+  "tiles": [],
+  "dataSources": [],
+  "pages": [
+    {
+      "name": "Page 1",
+      "id": "01995a56-7627-4698-bcd2-b198d05a1381"
+    }
+  ],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "984abaab-c358-4d9c-b593-f70e7804b594",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "queries": [],
+  "schema_version": "54",
+  "title": "real-time-price-disparities-report"
+}

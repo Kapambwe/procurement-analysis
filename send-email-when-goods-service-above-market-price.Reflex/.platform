@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Reflex",
+    "displayName": "send-email-when-goods-service-above-market-price"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "94de3339-954a-826d-4c32-178c512e1d57"
+  }
+}

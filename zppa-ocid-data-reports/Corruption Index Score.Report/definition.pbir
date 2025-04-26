@@ -1,0 +1,8 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../../zppa-ocid-data-semantic-model/corruption_index_score_semantic_model.SemanticModel"
+    }
+  }
+}
