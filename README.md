@@ -16,33 +16,42 @@ Here are the key visualizations from our analysis:
 ![Percentange Between Values](percentangebetweenvalues.jpg)
 
 ![Average Bid by Procurement Method](AverageBidByProcurement.jpg)
+
 *Average bid amounts across different procurement methods*
 
 ![Average Bidders by Contract Value](AverageBiddersByContractValue.jpg)
+
 *Relationship between contract value and number of bidders*
 
 ![Average Number of Bids](AverageNumberOfBids.jpg)
 *Distribution of bids received per contract*
 
 ![Contracts by Procuring Entity](ContractByProcuringEntity.jpg)
+
 *Volume of contracts awarded by different procuring entities*
 
 ![Contracts by Procurement Method](ContractsByProcurement.jpg)
+
 *Breakdown of contracts by procurement type*
 
 ![Contracts by Procurement Method](ContractsByProcurementMethod.jpg)
+
 *Detailed view of procurement methods used*
 
 ![Contracts by Selected Procuring Entity](ContractsByProcuringSelectedEntity.jpg)
+
 *Contract distribution for specific entities of interest*
 
 ![Efficiency and Potential Loss](EfficiencyAndPotentialLoss.jpg)
+
 *Analysis of procurement efficiency and potential financial losses*
 
 ![Limited Procurement Methods](LimitedNumberOfProcurementMethods.jpg)
+
 *Prevalence of limited/non-competitive procurement methods*
 
 ![Open Tendering Percentage](OpenTenderingPercentage.jpg)
+
 *Percentage of contracts awarded through open tendering*
 
 ## Getting Started
