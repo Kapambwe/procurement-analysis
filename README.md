@@ -46,6 +46,10 @@ Here are the key visualizations from our analysis:
 
 *Analysis of procurement efficiency and potential financial losses*
 
+![image](https://github.com/user-attachments/assets/9cac8fdf-0ea0-4a70-9830-0dd19f6d98a6)
+
+*Analysis of Average Score by Procurement Entity and Year*
+
 ![Limited Procurement Methods](LimitedNumberOfProcurementMethods.jpg)
 
 *Prevalence of limited/non-competitive procurement methods*
