@@ -13,6 +13,8 @@ This project analyzes open contracting data to identify potential corruption ris
 
 Here are the key visualizations from our analysis:
 
+![Percentange Between Values](percentangebetweenvalues.jpg)
+
 ![Average Bid by Procurement Method](AverageBidByProcurement.jpg)
 *Average bid amounts across different procurement methods*
 
